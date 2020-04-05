@@ -197,8 +197,8 @@
       
         <h1 id="打开-Mybatis-世界的神奇大门"><a href="#打开-Mybatis-世界的神奇大门" class="headerlink" title="打开 Mybatis 世界的神奇大门"></a>打开 Mybatis 世界的神奇大门</h1><a id="more"></a>
 
-<h2 id="第一步：找到官方网站，了解官方文档"><a href="#第一步：找到官方网站，了解官方文档" class="headerlink" title="第一步：找到官方网站，了解官方文档"></a>第一步：找到官方网站，了解官方文档</h2><h3 id="1-找到官网"><a href="#1-找到官网" class="headerlink" title="1.找到官网"></a>1.找到官网</h3><p><a href="https://mybatis.org/mybatis-3/zh/getting-started.html" target="_blank" rel="noopener">Mybatis</a><br><img src="2020-04-05-15-51-00.png" alt=""></p>
-<h3 id="2-2-可以换成中文（英语好的大佬请路过）"><a href="#2-2-可以换成中文（英语好的大佬请路过）" class="headerlink" title="2.2.可以换成中文（英语好的大佬请路过）"></a>2.2.可以换成中文（英语好的大佬请路过）</h3><p><img src="2020-04-05-15-53-15.png" alt=""></p>
+<h2 id="第一步：找到官方网站，了解官方文档"><a href="#第一步：找到官方网站，了解官方文档" class="headerlink" title="第一步：找到官方网站，了解官方文档"></a>第一步：找到官方网站，了解官方文档</h2><h3 id="1-找到官网"><a href="#1-找到官网" class="headerlink" title="1.找到官网"></a>1.找到官网</h3><p><a href="https://mybatis.org/mybatis-3/zh/getting-started.html" target="_blank" rel="noopener">Mybatis</a><br><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-15-51-00.png" alt></p>
+<h3 id="2-2-可以换成中文（英语好的大佬请路过）"><a href="#2-2-可以换成中文（英语好的大佬请路过）" class="headerlink" title="2.2.可以换成中文（英语好的大佬请路过）"></a>2.2.可以换成中文（英语好的大佬请路过）</h3><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-15-53-15.png" alt></p>
 <h3 id="3-简介：什末是mybatis"><a href="#3-简介：什末是mybatis" class="headerlink" title="3.简介：什末是mybatis"></a>3.简介：什末是mybatis</h3><pre><code>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。
 
     3.1：持久化
@@ -233,7 +233,7 @@
     iii. 字段：  id  name  pwd
     iv. 插入几条数据
 b. 在idea中新建一个普通的maven项目
-    i. 创建的maven工程可以作为父工程，导入一些基本的依赖，避免后期重复导入</code></pre><p><img src="2020-04-05-16-04-21.png" alt=""></p>
+    i. 创建的maven工程可以作为父工程，导入一些基本的依赖，避免后期重复导入</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-04-21.png" alt></p>
 <pre><code>这里删除了src目录（学习借鉴自 狂神说）
     ii. 在父工程pom.xml中导入依赖
         &lt;!--导入依赖--&gt;
@@ -258,9 +258,9 @@ b. 在idea中新建一个普通的maven项目
                 &lt;scope&gt;test&lt;/scope&gt;
             &lt;/dependency&gt;
         &lt;/dependencies&gt;
-    iii. 创建一个子模块</code></pre><p><img src="2020-04-05-16-06-53.png" alt="">            </p>
-<p>可以发现在子模块中不需要去重复导入依赖<br><img src="2020-04-05-16-08-02.png" alt=""></p>
-<pre><code>c.编写mybatis核心配置文件</code></pre><p><img src="2020-04-05-16-09-58.png" alt=""><br>    d. 编写mybatis工具类<br><img src="2020-04-05-16-10-59.png" alt=""></p>
+    iii. 创建一个子模块</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-06-53.png" alt>            </p>
+<p>可以发现在子模块中不需要去重复导入依赖<br><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-08-02.png" alt></p>
+<pre><code>c.编写mybatis核心配置文件</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-09-58.png" alt><br>    d. 编写mybatis工具类<br><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-10-59.png" alt></p>
 <pre><code>所以将其进行封装成工具类
     publicclassMybatisUtils{
         private static SqlSessionFactory sqlSessionFactory;
@@ -285,17 +285,17 @@ b. 在idea中新建一个普通的maven项目
 
     }
 e. 编写代码
-    i. 实体类</code></pre><p><img src="2020-04-05-16-17-22.png" alt="">                </p>
-<pre><code>ii. Dao接口（dao和mapper一样）</code></pre><p><img src="2020-04-05-16-17-47.png" alt="">            </p>
+    i. 实体类</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-17-22.png" alt>                </p>
+<pre><code>ii. Dao接口（dao和mapper一样）</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-17-47.png" alt>            </p>
 <pre><code>iii. 接口实现
     1) 原来是接口实现类 Impl
-    2) 现在根据官方文档用配置文件  Mapper.xml</code></pre><p><img src="2020-04-05-16-18-03.png" alt="">                    </p>
-<pre><code>这里不用再去写jdbc的那一套代码。只需要在配置文件中写sql语句</code></pre><p><img src="2020-04-05-16-18-38.png" alt=""><br><img src="2020-04-05-16-18-53.png" alt="">                    </p>
+    2) 现在根据官方文档用配置文件  Mapper.xml</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-18-03.png" alt>                    </p>
+<pre><code>这里不用再去写jdbc的那一套代码。只需要在配置文件中写sql语句</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-18-38.png" alt><br><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-18-53.png" alt>                    </p>
 <pre><code>f.  测试
-    i. 在UserMapper.java中编写接口方法</code></pre><p><img src="2020-04-05-16-19-20.png" alt=""></p>
-<pre><code>ii. 在UserMapper.xml中编写接口实现方法</code></pre><p><img src="2020-04-05-16-19-39.png" alt=""></p>
-<pre><code>iii. 在Test中编写测试类</code></pre><p><img src="2020-04-05-16-19-53.png" alt="">    </p>
-<h4 id="2-综上小结"><a href="#2-综上小结" class="headerlink" title="2.综上小结"></a>2.综上小结</h4><p>在idea中将基本环境搭建好之后，简单的需求将只需要在以下中操作<br><img src="2020-04-05-16-25-01.png" alt=""></p>
+    i. 在UserMapper.java中编写接口方法</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-19-20.png" alt></p>
+<pre><code>ii. 在UserMapper.xml中编写接口实现方法</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-19-39.png" alt></p>
+<pre><code>iii. 在Test中编写测试类</code></pre><p><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-19-53.png" alt>    </p>
+<h4 id="2-综上小结"><a href="#2-综上小结" class="headerlink" title="2.综上小结"></a>2.综上小结</h4><p>在idea中将基本环境搭建好之后，简单的需求将只需要在以下中操作<br><img src="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/2020-04-05-16-25-01.png" alt></p>
 <h4 id="扩：在以上环境的基础上实现CRUD"><a href="#扩：在以上环境的基础上实现CRUD" class="headerlink" title="扩：在以上环境的基础上实现CRUD"></a>扩：在以上环境的基础上实现CRUD</h4><pre><code>a. 增加
     1.接口类
         /**                                                    
