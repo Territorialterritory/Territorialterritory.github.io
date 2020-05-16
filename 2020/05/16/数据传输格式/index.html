@@ -8,15 +8,31 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>数据传输格式 | territorialterritory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="神奇的数据交换中间人-JSON1. json介绍     a. JSON(JavaScript Object Notation, JS 对象简谱) 是一种轻量级的数据交换格式。     b. 采用完全独立于编程语言的文本格式来存储和表示数据。     c. 简洁和清晰的层次结构     d.  易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。 2. 在Java中生成json（">
+<meta property="og:type" content="article">
 <meta property="og:title" content="数据传输格式">
 <meta property="og:url" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/index.html">
 <meta property="og:site_name" content="territorialterritory">
+<meta property="og:description" content="神奇的数据交换中间人-JSON1. json介绍     a. JSON(JavaScript Object Notation, JS 对象简谱) 是一种轻量级的数据交换格式。     b. 采用完全独立于编程语言的文本格式来存储和表示数据。     c. 简洁和清晰的层次结构     d.  易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。 2. 在Java中生成json（">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-49.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-59.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-35.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-47.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-55.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-05-02.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-05-51.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-01.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-30.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-41.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-57.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-08-59.png">
 <meta property="article:published_time" content="2020-05-16T15:13:24.000Z">
-<meta property="article:modified_time" content="2020-05-16T15:13:24.781Z">
+<meta property="article:modified_time" content="2020-05-16T16:09:23.212Z">
 <meta property="article:author" content="雍朔">
+<meta property="article:tag" content="java-springMVC">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-49.png">
   
     <link rel="alternative" href="/atom.xml" title="territorialterritory" type="application/atom+xml">
   
@@ -176,7 +192,316 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="神奇的数据交换中间人-JSON"><a href="#神奇的数据交换中间人-JSON" class="headerlink" title="神奇的数据交换中间人-JSON"></a>神奇的数据交换中间人-JSON</h1><pre><code>1. json介绍
+    a. JSON(JavaScript Object Notation, JS 对象简谱) 是一种轻量级的数据交换格式。
+    b. 采用完全独立于编程语言的文本格式来存储和表示数据。
+    c. 简洁和清晰的层次结构
+    d.  易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。
+2. 在Java中生成json（controller返回json数据）
+    a. Jackson是一款比较好的json解析工具（阿里的fastjson）
+    b. 例证
+        i. 导入依赖
+               &lt;dependencies&gt;
+                    &lt;!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind --&gt;
+                    &lt;dependency&gt;
+                        &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+                        &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+                        &lt;version&gt;2.11.0&lt;/version&gt;
+                    &lt;/dependency&gt;
+                    &lt;dependency&gt;
+                        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+                        &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+                        &lt;version&gt;1.18.10&lt;/version&gt;
+                    &lt;/dependency&gt;
+                &lt;/dependencies&gt;
+
+        ii. 配置web.xml文件
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+                 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                 xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;
+                 version=&quot;4.0&quot;&gt;
+            &lt;!--配置DispatcherServlet--&gt;
+            &lt;servlet&gt;
+                &lt;servlet-name&gt;springmvc&lt;/servlet-name&gt;
+                &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+                &lt;init-param&gt;
+                    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+                    &lt;param-value&gt;classpath:springmvc-servlet.xml&lt;/param-value&gt;
+                &lt;/init-param&gt;
+                &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+            &lt;/servlet&gt;
+            &lt;servlet-mapping&gt;
+                &lt;servlet-name&gt;springmvc&lt;/servlet-name&gt;
+                &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+            &lt;/servlet-mapping&gt;
+
+            &lt;!--springmvc乱码配置--&gt;
+            &lt;filter&gt;
+                &lt;filter-name&gt;encoding&lt;/filter-name&gt;
+                &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;
+                &lt;init-param&gt;
+                    &lt;param-name&gt;enconding&lt;/param-name&gt;
+                    &lt;param-value&gt;utf-8&lt;/param-value&gt;
+                &lt;/init-param&gt;
+            &lt;/filter&gt;
+            &lt;filter-mapping&gt;
+                &lt;filter-name&gt;encoding&lt;/filter-name&gt;
+                &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+            &lt;/filter-mapping&gt;
+        &lt;/web-app&gt;
+        iii. 配置springmvc-servlet.xml文件
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+               xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+               xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+               xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+               xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        https://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        https://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/mvc
+                        https://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;&gt;
+            &lt;context:component-scan base-package=&quot;cn.wf.controller&quot;/&gt;
+
+            &lt;!--视图解析器--&gt;
+            &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot; id=&quot;internalResourceViewResolver&quot;&gt;
+                &lt;!--前缀--&gt;
+                &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/jsp/&quot;/&gt;
+                &lt;!--后缀--&gt;
+                &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;/&gt;
+            &lt;/bean&gt;
+
+         &lt;/beans&gt;
+
+        iv. 编写实体类
+        @Data
+        @AllArgsConstructor
+        @NoArgsConstructor
+        public class User {
+            private String name;
+            private int age;
+            private String sex;
+        }
+
+        v. 编写controller类
+        @RestController
+        public class UserController {
+            @RequestMapping(&quot;/j1&quot;)
+            public String json1() throws JsonProcessingException {
+                //jackson  objectMapper，创建一个jackson对象
+                ObjectMapper mapper = new ObjectMapper();
+                //创建一个对象
+                User user = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                //将一个对象转换成字符串
+                String s = mapper.writeValueAsString(user);
+                return s;
+            }
+        }
+
+        vi. 配置tomcat测试
+            1) 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-49.png" alt>                    </p>
+<pre><code>2) 出现乱码
+    a) 解决方式一
+        i) 代码
+         @RequestMapping(value = &quot;/j1&quot;,produces = &quot;application/json;charset=utf-8&quot;)
+        ii) 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-59.png" alt>                        </p>
+<pre><code>b) 解决方式二
+    i) 代码：在springmvc-servlet.xml中配置
+     &lt;!--springmvc json乱码解决配置--&gt;
+        &lt;mvc:annotation-driven&gt;
+            &lt;mvc:message-converters&gt;
+                &lt;bean class=&quot;org.springframework.http.converter.StringHttpMessageConverter&quot;&gt;
+                    &lt;constructor-arg value=&quot;utf-8&quot;/&gt;
+                &lt;/bean&gt;
+                &lt;bean class=&quot;org.springframework.http.converter.json.MappingJackson2HttpMessageConverter&quot;&gt;
+                    &lt;property name=&quot;objectMapper&quot;&gt;
+                        &lt;bean class=&quot;org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean&quot;&gt;
+                            &lt;property name=&quot;failOnEmptyBeans&quot; value=&quot;false&quot;/&gt;
+                        &lt;/bean&gt;
+                    &lt;/property&gt;
+                &lt;/bean&gt;
+            &lt;/mvc:message-converters&gt;
+        &lt;/mvc:annotation-driven&gt;
+
+    ii) 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-35.png" alt></p>
+<pre><code>3) 关于注解及优化</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-47.png" alt><br><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-55.png" alt><br><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-05-02.png" alt><br>        c. 相关测试<br>            i. 以json格式展示数组<br>                1) 代码<br>                 @RequestMapping(“/j2”)<br>                    public String json2() throws JsonProcessingException {<br>                        //jackson  objectMapper，创建一个jackson对象<br>                        ObjectMapper mapper = new ObjectMapper();</p>
+<pre><code>        List&lt;User&gt; users = new ArrayList&lt;User&gt;();
+
+        //创建多个对象
+        User user1 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+        User user2 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+        User user3 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+        User user4 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+
+        users.add(user1);
+        users.add(user2);
+        users.add(user3);
+        users.add(user4);
+
+        //将一个对象转换成字符串
+        String s = mapper.writeValueAsString(users);
+        return s;
+    }
+
+2) 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-05-51.png" alt></p>
+<pre><code>ii. 以json格式展示时间
+    1) 代码
+     @RequestMapping(&quot;/j3&quot;)
+        public String json3() throws JsonProcessingException {
+            Date date = new Date();
+            return new ObjectMapper().writeValueAsString(date);
+        }
+
+    2) 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-01.png" alt></p>
+<pre><code>3) 结果转换
+    a) 自定义（Java）
+        i) 代码
+         @RequestMapping(&quot;/j3&quot;)
+            public String json3() throws JsonProcessingException {
+                //自定义日期格式
+                SimpleDateFormat format = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);
+                return new ObjectMapper().writeValueAsString(format.format(new Date()));
+            }
+
+        ii) 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-30.png" alt>                        </p>
+<pre><code>b) 使用ObjectMapper方法
+    i) 代码
+     @RequestMapping(&quot;/j4&quot;)
+        public String json4() throws JsonProcessingException {
+            ObjectMapper mapper = new ObjectMapper();
+            //不使用时间戳的方式
+            mapper.configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS ,false);
+            mapper.setDateFormat(new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;));
+            return mapper.writeValueAsString(new Date());
+        }
+
+    ii) 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-41.png" alt></p>
+<pre><code>c) json工具类
+    i) 代码
+        One. 工具类
+        public class JsonUtils {
+            public static String getJson(Object o,String s){
+                ObjectMapper mapper = new ObjectMapper();
+                //不使用时间戳
+                mapper.configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS ,false);
+                //自定义日期格式
+                SimpleDateFormat dateFormat = new SimpleDateFormat(s);
+                mapper.setDateFormat(dateFormat);
+
+                try {
+                    return mapper.writeValueAsString(o);
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        }
+
+        Two. 测试
+         @RequestMapping(&quot;/j5&quot;)
+            public String json5() throws JsonProcessingException {
+               return JsonUtils.getJson(new Date(),&quot;yyyy-MM-dd HH:mm:ss&quot;);
+            }
+
+    ii) 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-57.png" alt></p>
+<pre><code>d) 对工具类的优化（重载）
+    i) 代码
+    public class JsonUtils {
+        public static String getJson(Object o){
+            return getJson(o,&quot;yyyy-MM-dd HH:mm:ss&quot;);
+        }
+
+        public static String getJson(Object o,String s){
+            ObjectMapper mapper = new ObjectMapper();
+            //不使用时间戳
+            mapper.configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS ,false);
+            //自定义日期格式
+            SimpleDateFormat dateFormat = new SimpleDateFormat(s);
+            mapper.setDateFormat(dateFormat);
+
+            try {
+                return mapper.writeValueAsString(o);
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
+    ii) 调用时只需传递一个对象即可</code></pre><h2 id="fastjson-阿里之一光"><a href="#fastjson-阿里之一光" class="headerlink" title="fastjson-阿里之一光"></a>fastjson-阿里之一光</h2><pre><code>1. 简介fastjson
+    a. 阿里开发用于Java开发
+    b. 方便的实现json对象与JavaBean对象的转换
+    c. javaBean对象与json字符串转换
+    d. json对象与json字符串转换
+2. 例证
+    a. 导入依赖
+    &lt;!-- https://mvnrepository.com/artifact/com.alibaba/fastjson --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+        &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+        &lt;version&gt;1.2.68&lt;/version&gt;
+    &lt;/dependency&gt;
+    b. 代码
+        i. Controller
+            /**
+             * fastjson
+             */
+            @RequestMapping(&quot;/j7&quot;)
+            public String json7() throws JsonProcessingException {
+                List&lt;User&gt; users = new ArrayList&lt;User&gt;();
+                User user1 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                User user2 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                User user3 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                User user4 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                users.add(user1);
+                users.add(user2);
+                users.add(user3);
+                users.add(user4);
+
+                String s = JSON.toJSONString(users);
+                return s;
+            }
+
+        ii. 测试结果
+
+    c. fastjson的一些用法
+        i. 代码
+         @RequestMapping(&quot;/j7&quot;)
+            public String json7() throws JsonProcessingException {
+                List&lt;User&gt; users = new ArrayList&lt;User&gt;();
+                User user1 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                User user2 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                User user3 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                User user4 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                users.add(user1);
+                users.add(user2);
+                users.add(user3);
+                users.add(user4);
+
+                System.out.println(&quot;*** java对象 转 json字符串 ***&quot;);
+                String s1 = JSON.toJSONString(users);
+                System.out.println(&quot;JSON.toJSONString(users)==&gt;&quot; + s1);
+                String s2 = JSON.toJSONString(user1);
+                System.out.println(&quot;JSON.toJSONString(user1)==&gt;&quot; + s2);
+
+                System.out.println(&quot;*** json字符串 转 java对象 ***&quot;);
+                User user = JSON.parseObject(s2, User.class);
+                System.out.println(&quot;JSON.parseObject(s2, User.class)==&gt;&quot; + user);
+
+                System.out.println(&quot;*** java对象 转 json对象 ***&quot;);
+                JSONObject o = (JSONObject)JSON.toJSON(user2);
+                System.out.println(&quot;(JSONObject)JSON.toJSON(user2)==&gt;&quot; + o.getString(&quot;name&quot;));
+
+                System.out.println(&quot;*** json对象 转 java对象 ***&quot;);
+                User to_java_user = JSON.toJavaObject(o, user.getClass());
+                System.out.println(&quot;JSON.toJavaObject(o, user.getClass())==&gt;&quot; + to_java_user);
+
+                return &quot;Hello&quot;;
+            }
+
+        ii. 结果</code></pre><p><img src="/2020/05/16/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-08-59.png" alt>                </p>
+
       
 
       
@@ -215,6 +540,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java-springMVC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -317,7 +653,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#神奇的数据交换中间人-JSON"><span class="toc-number">1.</span> <span class="toc-text">神奇的数据交换中间人-JSON</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#fastjson-阿里之一光"><span class="toc-number">1.1.</span> <span class="toc-text">fastjson-阿里之一光</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
