@@ -6,15 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/2 | territorialterritory</title>
+  <title>Spring配置优化和DI依赖注入 | territorialterritory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="territorialterritory">
-<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
+  <meta name="description" content="一切为了简化和解耦">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring配置优化和DI依赖注入">
+<meta property="og:url" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/index.html">
 <meta property="og:site_name" content="territorialterritory">
+<meta property="og:description" content="一切为了简化和解耦">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-18-43.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-01.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-18.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-33.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-40.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-23-55.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-06.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-42.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-51.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-25-16.png">
+<meta property="article:published_time" content="2020-05-16T13:57:46.000Z">
+<meta property="article:modified_time" content="2020-05-16T14:25:46.132Z">
 <meta property="article:author" content="雍朔">
+<meta property="article:tag" content="java-Spring">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-18-43.png">
   
     <link rel="alternative" href="/atom.xml" title="territorialterritory" type="application/atom+xml">
   
@@ -154,60 +170,441 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Spring配置优化和DI依赖注入" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/26/hello-world/" class="archive-article-date">
-  	<time datetime="2020-02-26T06:50:31.266Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/26/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      Spring配置优化和DI依赖注入
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/" class="archive-article-date">
+  	<time datetime="2020-05-16T13:57:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一切为了简化和解耦"><a href="#一切为了简化和解耦" class="headerlink" title="一切为了简化和解耦"></a>一切为了简化和解耦</h1><a id="more"></a>
+
+<h2 id="Spring配置"><a href="#Spring配置" class="headerlink" title="Spring配置"></a>Spring配置</h2><pre><code>一：别名（alias）
+    1. 在配置文件中编写
+    &lt;alias name=&quot;user&quot; alias=&quot;userAlias&quot;/&gt;
+    2. 测试
+        a. 代码
+        public class MyTest {
+            public static void main(String[] args) {
+                ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+                //User user = (User) context.getBean(&quot;user&quot;);
+                User user = (User) context.getBean(&quot;userAlias&quot;);
+                user.show();
+        b. 结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-18-43.png" alt>        </p>
+<pre><code>二：Bean的配置
+    1. 在配置文件中编写
+    &lt;!--Bean的配置
+        id：bean的唯一标识符，相当于对象名
+        class：bean对象所对应的全限定类名：包名 + 类名
+        name：别名，可以去多个别名（比alias高级）
+        --&gt;
+        &lt;bean id=&quot;killer&quot; class=&quot;xx.xx.pojo.UserSecond&quot; name=&quot;second,deceiver k2;k3&quot;&gt;
+            &lt;property name=&quot;name&quot; value=&quot;丧钟长鸣&quot;/&gt;
+        &lt;/bean&gt;
+    2. 测试
+        a. 代码
+        public class MyTest {
+            public static void main(String[] args) {
+                ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+                UserSecond user = (UserSecond) context.getBean(&quot;k3&quot;);
+                user.show();
+            }
+
+        }
+
+        b. 结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-01.png" alt></p>
+<pre><code>三：import
+    1. import一般用于团队开发，可以将多个配置文件，导入合并为一个
+    2. 编写配置文件和总配置文件applicationContext.xml，在总配置文件中导入其他配置文件</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-18.png" alt></p>
+<pre><code>3. 测试
+    a. 代码</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-33.png" alt></p>
+<pre><code>b.  结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-40.png" alt></p>
+<h2 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h2><pre><code>一：构造器注入
+    a. 无参构造
+        &lt;!--无参构造的注入--&gt;
+        &lt;property name=&quot;name&quot; value=&quot;屠龙&quot;/&gt;
+
+    b. 有参构造
+        i. 第一种
+        &lt;!--有参构造，第一种，下表赋值--&gt;
+            &lt;constructor-arg index=&quot;0&quot; value=&quot;天屠&quot;/&gt;
+        ii. 第二种
+        &lt;!--第二种 根据类型传参（不建议，当存在两个以上的相同类型时，如何分辨）--&gt;
+            &lt;constructor-arg type=&quot;java.lang.String&quot; value=&quot;地屠&quot;/&gt;
+        iii. 第三种
+        &lt;!--第三种 直接通过参数名设置--&gt;
+            &lt;constructor-arg name=&quot;name&quot; value=&quot;人屠&quot;/&gt;
+        iv. 扩：新建一个实体类（无参）
+            1) 再beans.xml中同时有/无参注入
+            &lt;bean id=&quot;user&quot; class=&quot;cn.wf.pojo.User&quot;&gt;
+                &lt;!--第三种 直接通过参数名设置--&gt;
+                &lt;constructor-arg name=&quot;name&quot; value=&quot;人屠&quot;/&gt;
+            &lt;/bean&gt;
+                &lt;bean id=&quot;userS&quot; class=&quot;xx.xx.pojo.UserSecond&quot;&gt;
+
+                &lt;/bean&gt;
+
+二：Set方式诸如人【重点】
+    a. 依赖注入：Set注入
+        i. 依赖：bean对象的创建依赖与容器
+        ii. 注入：bean对象中的所有属性由容器注入
+    b. 环境搭建
+        i. 复杂类型
+        public class Address {
+            private String address;
+
+            public String getAddress() {
+                return address;
+            }
+
+            public void setAddress(String address) {
+                this.address = address;
+            }
+
+            @Override
+            public String toString() {
+                return &quot;Address{&quot; +
+                        &quot;address=&apos;&quot; + address + &apos;\&apos;&apos; +
+                        &apos;}&apos;;
+            }
+        }
+        ii. 真实测试对象
+        public class Student {
+            private String name;
+            private Address address;
+            private String[] books;
+            private List&lt;String&gt; hobbys;
+            private Map&lt;String,String&gt; card;
+            private Set&lt;String&gt; games;
+            private String wife;
+            private Properties info;
+        iii. beans.xml
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+            xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+            xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+            &lt;bean id=&quot;address&quot; class=&quot;xx.xx.pojo.Address&quot;&gt;
+                &lt;property name=&quot;address&quot; value=&quot;塔里木&quot;/&gt;
+            &lt;/bean&gt;
+            &lt;bean id=&quot;student&quot; class=&quot;xx.xx.pojo.Student&quot;&gt;
+                    &lt;!--第一种：普通值注入，value--&gt;
+                    &lt;property name=&quot;name&quot; value=&quot;天籁&quot;/&gt;
+                    &lt;!--第二种：Bean注入 ref--&gt;
+                    &lt;property name=&quot;address&quot; ref=&quot;address&quot;/&gt;
+
+                    &lt;!--第三种：数组注入 ref--&gt;
+                    &lt;property name=&quot;books&quot;&gt;
+                        &lt;array&gt;
+                            &lt;value&gt;周易&lt;/value&gt;
+                            &lt;value&gt;老子&lt;/value&gt;
+                            &lt;value&gt;六祖坛经&lt;/value&gt;
+                        &lt;/array&gt;
+                    &lt;/property&gt;
+
+                    &lt;!--第四种：List注入--&gt;
+                    &lt;property name=&quot;hobbys&quot;&gt;
+                        &lt;list&gt;
+                            &lt;value&gt;撒尿&lt;/value&gt;
+                            &lt;value&gt;挖土&lt;/value&gt;
+                            &lt;value&gt;和泥巴&lt;/value&gt;
+                        &lt;/list&gt;
+                    &lt;/property&gt;
+
+                    &lt;!--第五种：Map注入--&gt;
+                    &lt;property name=&quot;card&quot;&gt;
+                        &lt;map&gt;
+                            &lt;entry key=&quot;身份证&quot; value=&quot;123456789&quot;/&gt;
+                            &lt;entry key=&quot;银行卡&quot; value=&quot;987654321&quot;/&gt;
+                        &lt;/map&gt;
+                    &lt;/property&gt;
+
+                    &lt;!--第六种：Set注入--&gt;
+                    &lt;property name=&quot;games&quot;&gt;
+                        &lt;set&gt;
+                            &lt;value&gt;aaa&lt;/value&gt;
+                            &lt;value&gt;bbb&lt;/value&gt;
+                            &lt;value&gt;ccc&lt;/value&gt;
+                        &lt;/set&gt;
+                    &lt;/property&gt;
+
+                    &lt;!--第七种：null注入--&gt;
+                    &lt;property name=&quot;wife&quot;&gt;
+                        &lt;null/&gt;
+                    &lt;/property&gt;
+
+                    &lt;!--第八种：properties注入--&gt;
+                    &lt;property name=&quot;info&quot;&gt;
+                        &lt;props&gt;
+                            &lt;prop key=&quot;id&quot;&gt;001&lt;/prop&gt;
+                            &lt;prop key=&quot;name&quot;&gt;helloWorld&lt;/prop&gt;
+                            &lt;prop key=&quot;password&quot;&gt;abc&lt;/prop&gt;
+                            &lt;prop key=&quot;age&quot;&gt;one&lt;/prop&gt;
+                        &lt;/props&gt;
+                    &lt;/property&gt;
+
+            &lt;/bean&gt;
+        &lt;/beans&gt;
+        iv. 测试
+            1) 代码
+            public class MyTest {
+                public static void main(String[] args) {
+                    ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+                    Student student = (Student) context.getBean(&quot;student&quot;);
+                    //System.out.println(student.getName());
+                    System.out.println(student.toString());
+                }
+            }
+            2) 结果
+            /**
+                * Student{
+                *          name=&apos;天籁&apos;,
+                *          address=Address{address=&apos;塔里木&apos;},
+                *          books=[周易, 老子, 六祖坛经],
+                *          hobbys=[撒尿, 挖土, 和泥巴],
+                *          card={身份证=123456789, 银行卡=987654321},
+                *          games=[aaa, bbb, ccc],
+                *          wife=&apos;null&apos;,
+                *          info={age=one, password=abc, name=helloWorld, id=001}
+                *        }
+                */
+
+三：其他方式注入
+p/c命名空间注入</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-23-55.png" alt></p>
+<pre><code>a. p命名空间注入
+    i. 官网</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-06.png" alt></p>
+<pre><code>ii. 实体类
+    1) 属性随意（getterandsetter，toString）
+iii. beans.xml
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns:p=&quot;http://www.springframework.org/schema/p
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+    &lt;!--p命名空间注入，可以直接注入属性的值：property--&gt;
+    &lt;bean id=&quot;user&quot; class=&quot;xx.xx.pojo.User&quot; p:name=&quot;人屠&quot; p:age=&quot;3&quot;/&gt;
+&lt;/beans&gt;
+iv. 测试
+    1) 代码
+    /*p命名*/
+        @Test
+        public void test2(){
+            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;userbeans.xml&quot;);
+            User user = context.getBean(&quot;user&quot;,User.class);
+            System.out.println(user);
+        }
+    2) 结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-42.png" alt></p>
+<pre><code>b. c命名空间注入
+    i. 官网</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-51.png" alt></p>
+<pre><code>ii. 实体类
+    1) 在原有基础上添加有无参构造器
+iii. beans.xml
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns:c=&quot;http://www.springframework.org/schema/c&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+&lt;!--c命名空间注入，通过构造器注入：construct-agrs--&gt;
+    &lt;bean id=&quot;user2&quot; class=&quot;xx.xx.pojo.User&quot; c:name=&quot;诡诈&quot; c:age=&quot;3&quot;/&gt;
+&lt;/beans&gt;
+iv. 测试
+    1) 代码
+    /*c命名*/
+        @Test
+        public void test3(){
+            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;userbeans.xml&quot;);
+            User user = context.getBean(&quot;user2&quot;,User.class);
+            System.out.println(user);
+        }
+    2) 结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-25-16.png" alt>                </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>阁下高义<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alpay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java-Spring</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          自动装配Bean及注解开发
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/04/30/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">相约春天</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一切为了简化和解耦"><span class="toc-number">1.</span> <span class="toc-text">一切为了简化和解耦</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring配置"><span class="toc-number">1.1.</span> <span class="toc-text">Spring配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖注入"><span class="toc-number">1.2.</span> <span class="toc-text">依赖注入</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -236,8 +633,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
