@@ -6,34 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>自动装配Bean及注解开发 | territorialterritory</title>
+  <title>javase方法概述 | territorialterritory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不同方式实现装配和使用注解简化代码">
+  <meta name="description" content="javaSE函数学习方法的定义与调用1. Java方法是语句的集合，组在一起执行一个功能。（封装一段特定功能的代码）     a. 方法是解决一类问题的步骤的有序集合     b. 方法包含于类或对象中     c. 方法在程序中创建，再其他地方被引用     d. 方法定义在类中     e. 方法中不能定义方法 2. 设计原则（方法的本以是功能块，就是实现某个功能的语句块的集合）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自动装配Bean及注解开发">
-<meta property="og:url" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/index.html">
+<meta property="og:title" content="javase方法概述">
+<meta property="og:url" content="http://yoursite.com/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/index.html">
 <meta property="og:site_name" content="territorialterritory">
-<meta property="og:description" content="不同方式实现装配和使用注解简化代码">
+<meta property="og:description" content="javaSE函数学习方法的定义与调用1. Java方法是语句的集合，组在一起执行一个功能。（封装一段特定功能的代码）     a. 方法是解决一类问题的步骤的有序集合     b. 方法包含于类或对象中     c. 方法在程序中创建，再其他地方被引用     d. 方法定义在类中     e. 方法中不能定义方法 2. 设计原则（方法的本以是功能块，就是实现某个功能的语句块的集合）">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-11.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-43.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-57.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-05.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-13.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-50.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-33-01.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-33-09.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-00.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-11.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-31.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-36-14.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-36-30.png">
-<meta property="article:published_time" content="2020-05-16T14:02:38.000Z">
-<meta property="article:modified_time" content="2020-05-16T14:38:13.178Z">
+<meta property="og:image" content="http://yoursite.com/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-29-43.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-30-38.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-31-33.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-31-46.png">
+<meta property="article:published_time" content="2020-08-03T11:17:16.000Z">
+<meta property="article:modified_time" content="2020-08-03T11:39:19.734Z">
 <meta property="article:author" content="雍朔">
-<meta property="article:tag" content="java-Spring">
+<meta property="article:tag" content="javaSE">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-11.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-29-43.png">
   
     <link rel="alternative" href="/atom.xml" title="territorialterritory" type="application/atom+xml">
   
@@ -173,203 +164,386 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-自动装配Bean及注解开发" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-javase方法概述" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      自动装配Bean及注解开发
+      javase方法概述
     </h1>
   
 
         
-        <a href="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/" class="archive-article-date">
-  	<time datetime="2020-05-16T14:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+        <a href="/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/" class="archive-article-date">
+  	<time datetime="2020-08-03T11:17:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="不同方式实现装配和使用注解简化代码"><a href="#不同方式实现装配和使用注解简化代码" class="headerlink" title="不同方式实现装配和使用注解简化代码"></a>不同方式实现装配和使用注解简化代码</h1><a id="more"></a>
+        <a id="more"></a>
 
-<h2 id="Bean-的相关操作"><a href="#Bean-的相关操作" class="headerlink" title="Bean 的相关操作"></a>Bean 的相关操作</h2><pre><code>一：Bean的作用域
-1. 官网</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-11.png" alt></p>
-<pre><code>Spring Bean是被实例的，组装的及被Spring 容器管理的Java对象。
-2. The Singleton Scope（单例模式，Spring默认机制）
-    a. 官网</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-43.png" alt></p>
-<pre><code>b. 测试
-    i. 代码</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-57.png" alt><br><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-05.png" alt>            </p>
-<pre><code>ii. 结果</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-13.png" alt></p>
-<pre><code>3. The Prototype Scope（原型模式：每次从容器中get的时候，都会产生一个新对象。）
-    a. 官网</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-50.png" alt></p>
-<pre><code>b. 测试
-    i. 代码</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-33-01.png" alt></p>
-<pre><code>ii. 结果</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-33-09.png" alt></p>
-<pre><code>4. 其余的 request,session,application这些只能在web开发中使用到。</code></pre><p>二：自动装配Bean<br>    自动装配是Spring满足bean依赖的一种方式。Spring会在上下文中自动寻找，并自动给bean装配属性。<br>    1. 在xml中显示的配置<br>    2. 在Java中显示配置<br>    3. 隐式的自动装配bean【重点】<br>    4. 搭建环境<br>        a. 实体类<br>            i. Cat<br>            public class Cat {<br>                public void shout(){<br>                    System.out.println(“miao~”);<br>                }</p>
-<pre><code>    }
-    ii. Dog
-    public class Dog {
-        public void shout(){
-            System.out.println(&quot;wang~&quot;);
-        }
-    }
-    iii. People（getterandsetter，toString）
-    public class People {
-        private Cat cat;
-        private     Dog dog;
-        private String name;
-    }
-b. beans.xml
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
-    &lt;bean id=&quot;cat&quot; class=&quot;xx.xx.pojo.Cat&quot;/&gt;
-    &lt;bean id=&quot;dog&quot; class=&quot;xx.xx.pojo.Dog&quot;/&gt;
-    &lt;!--ByName:会自动在容器上下文中查找，和自己对象set方法后面的值对应的 bean id--&gt;
-    &lt;bean id=&quot;people&quot; class=&quot;xx.xx.pojo.People&quot; &gt;
-        &lt;property name=&quot;name&quot; value=&quot;阜螽&quot;/&gt;
-        &lt;property name=&quot;dog&quot; ref=&quot;dog&quot;/&gt;
-        &lt;property name=&quot;cat&quot; ref=&quot;cat&quot;/&gt;
-    &lt;/bean&gt;
-&lt;/beans&gt;
-c. 测试类
-    i. 代码
-    public class MyTest {
-        @Test
-        public void test(){
-            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
-            People people = context.getBean(&quot;people&quot;, People.class);
-            people.getDog().shout();
-            people.getCat().shout();
+<h2 id="javaSE函数学习"><a href="#javaSE函数学习" class="headerlink" title="javaSE函数学习"></a>javaSE函数学习</h2><h3 id="方法的定义与调用"><a href="#方法的定义与调用" class="headerlink" title="方法的定义与调用"></a>方法的定义与调用</h3><pre><code>1. Java方法是语句的集合，组在一起执行一个功能。（封装一段特定功能的代码）
+    a. 方法是解决一类问题的步骤的有序集合
+    b. 方法包含于类或对象中
+    c. 方法在程序中创建，再其他地方被引用
+    d. 方法定义在类中
+    e. 方法中不能定义方法
+2. 设计原则（方法的本以是功能块，就是实现某个功能的语句块的集合）
+    a. 原子性：一个方法只完成一个功能（利于后期扩张）
+3. 命名规则：驼峰
+4. 格式
+    a. 访问权限修饰符 修饰符   返回值类型   方法名（形参类型  参数名）{
+                、、、
+                 方法体
+                、、、
+                return  返回值；}
+        i. 访问权限修饰符：public
+        ii. 修饰符：static
 
-        }
-    }
-    ii. 结果</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-00.png" alt></p>
-<pre><code>5. ByName自动装配（只能小写）
-    a. 代码
-           &lt;bean id=&quot;cat&quot; class=&quot;xx.xx.pojo.Cat&quot;/&gt;
-           &lt;bean id=&quot;dog&quot; class=&quot;xx.xx.pojo.Dog&quot;/&gt;
-    &lt;!--ByName:会自动在容器上下文中查找，和自己对象set方法后面的值对应的 beanid（要对应被装配类中属性的名称且开头必须小写）--&gt;
-        &lt;bean id=&quot;people&quot; class=&quot;xx.xx.pojo.People&quot; autowire=&quot;byName&quot;&gt;
-            &lt;property name=&quot;name&quot; value=&quot;阜螽&quot;/&gt;
-            &lt;!--&lt;property name=&quot;dog&quot; ref=&quot;dog&quot;/&gt;
-            &lt;property name=&quot;cat&quot; ref=&quot;cat&quot;/&gt;--&gt;
-        &lt;/bean&gt;
-    b. 结果</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-11.png" alt></p>
-<pre><code>6. ByType
-    a. 代码
-        &lt;bean id=&quot;cat&quot; class=&quot;xx.xx.pojo.Cat&quot;/&gt;
-        &lt;bean id=&quot;dog101&quot; class=&quot;xx.xx.pojo.Dog&quot;/&gt;
-        &lt;!--ByType:会自动在容器上下文中查找，和自己对象属性类型相同的 bean--&gt;
-        &lt;bean id=&quot;people&quot; class=&quot;xx.xx.pojo.People&quot; autowire=&quot;byType&quot;&gt;
-            &lt;property name=&quot;name&quot; value=&quot;阜螽&quot;/&gt;
-        &lt;/bean&gt;
-    b. 结果</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-31.png" alt></p>
-<pre><code>7. 小结
-    a. ByName：要求所有bean的id唯一，且这个bean需要和自动注入的属性的set方法的值一致。
-    b. ByType：要求所有bean的class唯一，且这个bean需要和自动注入的属性的类型一致。
+    b. 修饰符：
+    c. 返回值类型：返回值的数据类型，当没有返回值的时候为void
+    d. 方法名：标识符（小驼峰）
+    e. 形参类型：当方法无法自己子自给时，需要外部传入定义的变量
+    f. 方法体： 
+    g. 方法的使用
+    h. 注：实参列表要与形参列表数据类型一致、长度一致、顺序一致。
+5. 优点：
+    a. 减少代码冗余
+    b. 提高复用性
+    c. 提高可读性
+    d. 提高可维护性
+    e. 方便分工合作
+    f. 降低代码的 耦合度     
+6. return的两种用法：
+    a. 返回数据，只能有一个
+    b. 结束方法
+        i. 对比 
+            1) continue：跳过本次循环
+            2) break：跳出循环
+            3) return：结束方法     </code></pre><h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><pre><code>同一个类中，修饰符一致，返回值一致，方法名相同（形参列表不同）
 
-三：注解实现自动装配
-1. Jdk1.5 Spring2.5支持注解
-2. 使用注解须知
-    a. 导入约束
-        i. context约束
-    b. 配置注解的支持：context:annotation-config
-    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-    &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-        xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
-        xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
-            https://www.springframework.org/schema/beans/spring-beans.xsd
-            http://www.springframework.org/schema/context
-            https://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+可以在同一类中实现更多的功能，且不违背一个方法实现一个功能的基本原则。</code></pre><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><pre><code>1. 递归可以解决具有既定规律的特定问题
+2. 何时使用
+    a. 当需要解决的问题可以分成若个小问题，大小问题的解决方法一致相同
+    b. 有固定规律，函数中自己调用自己。
+3. 如何正确使用递归
+    a. 设置有效的出口条件，避免无穷递归。
+4. 递归阶乘</code></pre><p><img src="/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-29-43.png" alt></p>
+<pre><code>a. 递进：每一次推进，计算都比上一次简单，直至简单到无需推进，就能获得结果。（也叫：到达出口）。
+b. 回归：基于出口的结果，逐层向上回归，依次计算每一层的结果，直至回归到最顶层。
+c. 注：1的阶乘为1.
+d. 例证
+    i. 提出问题</code></pre><p><img src="/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-30-38.png" alt></p>
+<pre><code>ii. 尝试解决问题</code></pre><p><img src="/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-31-33.png" alt></p>
+<pre><code>iii. 解决问题</code></pre><p><img src="/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-31-46.png" alt>            </p>
+<pre><code>e. 注：所有能以递归解决的问题，循环都能解决。当解决复杂问题的时候，递归的实现方式更为简单。
+f. 四大法则
+    1. 基准情形： 必须有某些基准情形，它无需递归即可解出。
 
-        &lt;context:annotation-config/&gt;
+    2. 不断推进： 对于需要递归求解的情形，每次递归调用都必须使得求解状况朝着基准情形推进。
 
-    &lt;/beans&gt;
-    c. 所以
-        i. Bean.xml
-        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-        &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-               xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-               xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
-               xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
-                https://www.springframework.org/schema/beans/spring-beans.xsd
-                http://www.springframework.org/schema/context
-                https://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+    3. 设计法则： 假设所有的递归调用都能运行。
 
-            &lt;!--注解支持--&gt;
-            &lt;context:annotation-config/&gt;
-            &lt;!--注解实现自动装配--&gt;
-            &lt;bean id=&quot;cat&quot; class=&quot;cn.wf.pojo.Cat&quot;/&gt;
-            &lt;bean id=&quot;dog&quot; class=&quot;cn.wf.pojo.Dog&quot;/&gt;
-            &lt;bean id=&quot;people&quot; class=&quot;cn.wf.pojo.People&quot;/&gt;
-        &lt;/beans&gt;
-        ii. 实体类</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-36-14.png" alt></p>
-<pre><code>iii. 测试
-    1) 代码
-    public class MyTest {
-        @Test
-        public void test(){
-            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
-            People people = context.getBean(&quot;people&quot;, People.class);
-            people.getDog().shout();
-            people.getCat().shout();
+    4. 合成效益法则：在求解一个问题的同一实例时，切勿在不同的递归调用中做重复性工作。 
 
-        }
-    }
-    2) 结果</code></pre><p><img src="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-36-30.png" alt></p>
-<pre><code>d. 对注解的说明
-    i.  @Autowired
-        1) 直接在属性上使用。也可以在set方法上使用。
-        2) 使用 @Autowired注解，可以在实体类中省略编写set方法。但自动装配的属性在IOC中存在且符合名字byname。
-    ii. 拓展
-        1) @Nullable：字段可为null
-              public void setCat(@Nullable Cat cat) {
-                    this.cat = cat;
+g. 函数的总结：
+
+h. 拓展：
+    i. 斐波那契数列 又称为“兔子数列”，指的是这样一个数列：1、1、2、3、5、8、13、21、34、……在数学上，斐波纳契数列以如下被以递归的方法定义：F(0)=0，F(1)=1, F(n)=F(n-1)+F(n-2)，即从第三项开始每一项都等于前面两项的和。
+    ii. 代码实现;
+    package cn.wf.method;
+
+    /**
+    *斐波那契数列:1 1 2 3 5 8 13 21 34
+    * @author xx
+    * @date 
+    */
+    public class FibonacciSequence {
+        public static void main(String[] args) {
+            int result = 0;
+                for(int i = 1;i &lt;= 3;i++) {
+                        result += method(i);
                 }
-        2)  @Autowired中可以设置字段为null
-            public @interface Autowired {
-                boolean required() default true;
+                System.out.println(result);
+        }
+        /**递归斐波那契数列*/
+        public static int  method (int n) {
+            if(n == 1) {
+                return 1;
+            }else if(n == 2) {
+                return 1;
+            }else {
+                return method(n-1) + method(n-2);
             }
+        }
+    }</code></pre><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><pre><code>package cn.wf.method;
 
-        3) 测试：如果显示的定义： @Autowired(required = false)，说明这个对象可以为null，否则不为null。
-            public class People {
-                @Autowired(required = false)
-                private Cat cat;
-                @Autowired
-                private Dog dog;
-                private String name;
-            }
-e. 如果自动装配环境比较复杂，自动装配无法通过一个注解【@Autowired】完成的时候，可以使用【@Qualifier（value = xxx）】，指定一个唯一的bean对象的注入。
-    i. 比如如下复杂环境
-    &lt;bean id=&quot;dog11&quot; class=&quot;cn.wf.pojo.Dog&quot;/&gt;
-    &lt;bean id=&quot;dog101&quot; class=&quot;cn.wf.pojo.Dog&quot;/&gt;
-    ii. 解决方案
-     @Autowired
-     @Qualifier(value = &quot;dog101&quot;)
-     private Dog dog;
-f. @Resource注解（java实现自动装配）
-    public class People {
-        @Resource（name = “cat2”）
-        private Cat cat;
-         @Resource
-        private Dog dog;
-        private String name;
+import java.util.Scanner;
+
+/**
+*用户管理模块 +
+*  登陆
+*  注册
+*  修改密码
+*  共同数据：账号、密码
+* @author xx
+* @date 
+*/
+@SuppressWarnings(&quot;all&quot;)
+public class UserManagement {
+    static String username = &quot;&quot;;
+    static String password = &quot;&quot;;
+    static int num = 1;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println(&quot;***欢迎来访地狱***&quot;);
+            System.out.println(&quot;请选择地狱套餐：1、登陆    2、注册    3、修改密码&quot;);
+            System.out.println(&quot;请选择编号：&quot;);
+            choose(scanner);
+        }
     }
-g. 小结
-    i. @Resource和@Autowired的区别
-        1) 都是用来实现自动装配的，都可以放置在属性字段之上
-        2) @Autowired：默认通过byType的方式实现，而且必须要求这个对象存在。如果不能唯一自动装配，则使用@Qualifier通过byname【常用】
-        3) @Resource：默认通过byname的方式实现，如果找不到名字，则通过byType实现。如果都找不到的情况下，不错。【常用】
-    ii. 执行顺序不同
-        1) @Autowired：默认通过byType的方式实现，如果不行，byname
-        2) @Resource：默认通过byname的方式实现，如果不行，byType</code></pre>
+
+    /**
+    * 功能选择
+    * @param scanner
+    */
+    public static void choose(Scanner scanner){
+        String next = scanner.next();
+        switch (next){
+            case &quot;1&quot;:
+                System.out.println(&quot;***欢迎登陆***&quot;);
+                login(scanner);
+                break;
+                System.out.println(&quot;***欢迎注册***&quot;);
+                registered(scanner);
+                break;
+            case &quot;3&quot;:
+                System.out.println(&quot;***修改密码***&quot;);
+                changePassword(scanner);
+                break;
+        }
+
+
+    /**
+    * 登陆
+    * @param scanner
+    */
+    public static void login(Scanner scanner){
+        //限制登陆次数
+            //提示输入信息
+            System.out.println(&quot;请输入账号：&quot;);
+            String trg1 = scanner.next();
+            System.out.println(&quot;请输入密码：&quot;);
+            String trg2 = scanner.next();
+            if (trg1.equals(username) &amp;&amp; trg2.equals(password)){
+                System.out.println(&quot;登陆成功！&quot;);
+                //进入计算器中
+                //calculator(scanner);
+                CalculatorDemo calculatorDemo = new CalculatorDemo();
+                CalculatorDemo.calculator(scanner);
+            } else {
+                System.out.println(&quot;账号或密码不一致，登陆失败！&quot;);
+                System.out.println(&quot;请选择是否继续：yes or no&quot;);
+                String message = scanner.next();
+                switch (message){
+                    case &quot;yes&quot;:
+                        login(scanner);
+                        break;
+                        /*System.out.println(&quot;您还有&quot; + (5 - num) + &quot;次机会！&quot;);
+                        num ++;
+                        login(scanner);
+                        if (num == 5){
+                            System.out.println(&quot;登陆次数过多，账号被锁定冻结！&quot;);
+                            return;
+                        }else if (5 - num == 1){
+                                System.out.println(&quot;！！！当前仅剩最后一次登陆机会，如果忘记密码，请输入Forget！！！&quot;);
+                                String trg = scanner.next();
+                                while (trg.equals(&quot;Forget&quot;)){
+                                    System.out.println(&quot;系统将帮您重置密码，请输入验证信息：&quot; + &quot;\n&quot; +&quot;xxxxx的宗旨是：&quot;);
+                                    String ms = scanner.next();
+                                    if (ms.equals(&quot;xxxxx&quot;)){
+                                        System.out.println(&quot;验证成功！&quot;);
+                                        System.out.println(&quot;请输入密码：&quot;);
+                                        String str = scanner.next();
+                                        System.out.println(&quot;请确认密码：&quot;);
+                                        String str1 = scanner.next();
+                                        break;
+                                    }else{
+                                        System.out.print(&quot;信息错误!&quot;);
+                                    }
+                                    return;
+                                }
+                            }else {
+                            return;
+                        }
+                        break;*/
+                    case &quot;no&quot;:
+                        System.out.println(&quot;感谢浏览，再见！&quot;);
+                        return;
+                }
+            }
+    }
+
+    /**
+    * 注册
+    * @param scanner
+    */
+    public static void registered(Scanner scanner){
+        //提示输入信息（可以考虑账号以被注册情况）
+        System.out.println(&quot;请输入账号：&quot;);
+        String mes1 = scanner.next();
+        System.out.println(&quot;请输入密码：&quot;);
+        String mes2 = scanner.next();
+        System.out.println(&quot;请确认密码：&quot;);
+        String mes3 = scanner.next();
+        if (mes2.equals(mes3)){
+            //将注册信息保存，用以验证登陆。
+            username = mes1;
+            password = mes2;
+            System.out.println(&quot;注册成功！&quot;);
+        }else {
+            System.out.println(&quot;密码不一致，注册失败！&quot;);
+            System.out.println(&quot;请选择是否继续：yes or no&quot;);
+            String trg = scanner.next();
+            switch (trg){
+                case &quot;yes&quot;:
+                    registered(scanner);
+                    break;
+                case &quot;no&quot;:
+                    return;
+            }
+        }
+    }
+
+    /**
+    * 修改密码
+    * @param scanner
+    */
+    public static void changePassword(Scanner scanner){
+        System.out.println(&quot;请输入账号：&quot;);
+        String uname = scanner.next();
+        System.out.println(&quot;请输入密码：&quot;);
+        String upass = scanner.next();
+        if (uname.equals(username) &amp;&amp; upass.equals(password)){
+            System.out.println(&quot;请输入新密码：&quot;);
+            String pass1 = scanner.next();
+            System.out.println(&quot;请确认新密码：&quot;);
+            String pass2 = scanner.next();
+            if (pass1.equals(pass2)) {
+                System.out.println(&quot;修改成功！&quot;);
+                password = pass1;
+            }else {
+                System.out.println(&quot;密码不一致，修改失败！&quot;);
+            }
+        }else {
+            System.out.println(&quot;账号密码不匹配！&quot;);
+        }
+    }
+
+    /**
+    * 计算器
+    * @param scanner
+    */
+    /*public static void calculator(Scanner scanner){
+        System.out.println(&quot;请选择计算方式：+   -   *   /&quot;);
+        String select = scanner.next();
+        switch (select){
+            case &quot;+&quot;:
+                System.out.println(&quot;请输入加数：&quot;);
+                int i = scanner.nextInt();
+                System.out.println(&quot;请输入被加数：&quot;);
+                int i1 = scanner.nextInt();
+                System.out.println(i + &quot;+&quot; + i1 + &quot;=&quot; + (i + i1));
+                break;
+            case &quot;-&quot;:
+                System.out.println(&quot;请输入减数：&quot;);
+                int i2 = scanner.nextInt();
+                System.out.println(&quot;请输入被减数：&quot;);
+                int i3 = scanner.nextInt();
+                System.out.println(i2 + &quot;-&quot; + i3 + &quot;=&quot; + (i2 + i3));
+                break;
+            case &quot;*&quot;:
+                System.out.println(&quot;请输入乘数：&quot;);
+                int i4 = scanner.nextInt();
+                System.out.println(&quot;请输入被乘数：&quot;);
+                int i5 = scanner.nextInt();
+                System.out.println(i4 + &quot;*&quot; + i5 + &quot;=&quot; + (i4 + i5));
+                break;
+            case &quot;/&quot;:
+                System.out.println(&quot;请输入除数：&quot;);
+                int i6 = scanner.nextInt();
+                System.out.println(&quot;请输入被除数：&quot;);
+                int i7 = scanner.nextInt();
+                System.out.println(i6 + &quot;/&quot; + i7 + &quot;=&quot; + (i6 + i7));
+                break;
+        }
+
+
+    }*/
+
+}
+
+计算器类
+package cn.wf.method;
+
+import java.util.Scanner;
+
+/**
+*简单的计算器（+、-、*、/）
+* @author xx
+* @date 
+*/
+@SuppressWarnings(&quot;all&quot;)
+public class CalculatorDemo {
+    public static void main(String[] args) {
+
+    }
+
+    public static void calculator(Scanner scanner){
+        System.out.println(&quot;请选择计算方式：+   -   *   /&quot;);
+        String select = scanner.next();
+        switch (select){
+            case &quot;+&quot;:
+                System.out.println(&quot;请输入加数：&quot;);
+                int i = scanner.nextInt();
+                System.out.println(&quot;请输入被加数：&quot;);
+                int i1 = scanner.nextInt();
+                System.out.println(i + &quot;+&quot; + i1 + &quot;=&quot; + (i + i1));
+                break;
+            case &quot;-&quot;:
+                System.out.println(&quot;请输入减数：&quot;);
+                int i2 = scanner.nextInt();
+                System.out.println(&quot;请输入被减数：&quot;);
+                int i3 = scanner.nextInt();
+                System.out.println(i2 + &quot;-&quot; + i3 + &quot;=&quot; + (i2 - i3));
+                break;
+            case &quot;*&quot;:
+                System.out.println(&quot;请输入乘数：&quot;);
+                int i4 = scanner.nextInt();
+                System.out.println(&quot;请输入被乘数：&quot;);
+                int i5 = scanner.nextInt();
+                System.out.println(i4 + &quot;*&quot; + i5 + &quot;=&quot; + (i4 * i5));
+                break;
+            case &quot;/&quot;:
+                System.out.println(&quot;请输入除数：&quot;);
+                int i6 = scanner.nextInt();
+                System.out.println(&quot;请输入被除数：&quot;);
+                int i7 = scanner.nextInt();
+                System.out.println(i6 + &quot;/&quot; + i7 + &quot;=&quot; + (i6 / i7));
+                break;
+        }
+
+
+    }
+
+}
+
+登陆类调用计算器类的计算器方法</code></pre>
       
 
       
@@ -413,7 +587,7 @@ g. 小结
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java-Spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">javaSE</a>
         		</li>
       		
 		</ul>
@@ -469,7 +643,7 @@ g. 小结
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/03/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -483,18 +657,9 @@ g. 小结
   
 <nav id="article-nav">
   
-    <a href="/2020/05/16/%E7%94%B1%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E5%88%B0AOP/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          由代理模式到AOP
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Spring配置优化和DI依赖注入</div>
+    <a href="/2020/05/16/%E5%BC%82%E6%AD%A5%E4%BC%A0%E8%BE%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">异步传输相关操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -521,7 +686,7 @@ g. 小结
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#不同方式实现装配和使用注解简化代码"><span class="toc-number">1.</span> <span class="toc-text">不同方式实现装配和使用注解简化代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Bean-的相关操作"><span class="toc-number">1.1.</span> <span class="toc-text">Bean 的相关操作</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#javaSE函数学习"><span class="toc-number">1.</span> <span class="toc-text">javaSE函数学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法的定义与调用"><span class="toc-number">1.1.</span> <span class="toc-text">方法的定义与调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法的重载"><span class="toc-number">1.2.</span> <span class="toc-text">方法的重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归"><span class="toc-number">1.3.</span> <span class="toc-text">递归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#练习"><span class="toc-number">1.4.</span> <span class="toc-text">练习</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
