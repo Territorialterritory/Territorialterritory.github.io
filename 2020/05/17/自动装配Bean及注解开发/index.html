@@ -6,17 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: java-Mybatis | territorialterritory</title>
+  <title>自动装配Bean及注解开发 | territorialterritory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="他强任他强，微风拂山岗。他横任他横，明月照大江。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="territorialterritory">
-<meta property="og:url" content="http://yoursite.com/tags/java-Mybatis/index.html">
+  <meta name="description" content="不同方式实现装配和使用注解简化代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动装配Bean及注解开发">
+<meta property="og:url" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="territorialterritory">
-<meta property="og:description" content="他强任他强，微风拂山岗。他横任他横，明月照大江。">
+<meta property="og:description" content="不同方式实现装配和使用注解简化代码">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-11.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-43.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-57.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-05.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-13.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-50.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-33-01.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-33-09.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-00.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-11.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-31.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-36-14.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-36-30.png">
+<meta property="article:published_time" content="2020-05-16T22:02:38.000Z">
+<meta property="article:modified_time" content="2020-05-16T14:38:13.178Z">
 <meta property="article:author" content="雍朔">
+<meta property="article:tag" content="java-Spring">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-11.png">
   
     <link rel="alternative" href="/atom.xml" title="territorialterritory" type="application/atom+xml">
   
@@ -150,60 +167,374 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-自动装配Bean及注解开发" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/20/Mybatis-%E5%8A%A8%E6%80%81sql/" class="archive-article-date">
-  	<time datetime="2020-04-20T12:46:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/20/Mybatis-%E5%8A%A8%E6%80%81sql/">Mybatis-动态sql</a>
+    <h1 class="article-title" itemprop="name">
+      自动装配Bean及注解开发
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/" class="archive-article-date">
+  	<time datetime="2020-05-16T22:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="不同方式实现装配和使用注解简化代码"><a href="#不同方式实现装配和使用注解简化代码" class="headerlink" title="不同方式实现装配和使用注解简化代码"></a>不同方式实现装配和使用注解简化代码</h1><a id="more"></a>
+
+<h2 id="Bean-的相关操作"><a href="#Bean-的相关操作" class="headerlink" title="Bean 的相关操作"></a>Bean 的相关操作</h2><pre><code>一：Bean的作用域
+1. 官网</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-11.png" alt></p>
+<pre><code>Spring Bean是被实例的，组装的及被Spring 容器管理的Java对象。
+2. The Singleton Scope（单例模式，Spring默认机制）
+    a. 官网</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-43.png" alt></p>
+<pre><code>b. 测试
+    i. 代码</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-31-57.png" alt><br><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-05.png" alt>            </p>
+<pre><code>ii. 结果</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-13.png" alt></p>
+<pre><code>3. The Prototype Scope（原型模式：每次从容器中get的时候，都会产生一个新对象。）
+    a. 官网</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-32-50.png" alt></p>
+<pre><code>b. 测试
+    i. 代码</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-33-01.png" alt></p>
+<pre><code>ii. 结果</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-33-09.png" alt></p>
+<pre><code>4. 其余的 request,session,application这些只能在web开发中使用到。</code></pre><p>二：自动装配Bean<br>    自动装配是Spring满足bean依赖的一种方式。Spring会在上下文中自动寻找，并自动给bean装配属性。<br>    1. 在xml中显示的配置<br>    2. 在Java中显示配置<br>    3. 隐式的自动装配bean【重点】<br>    4. 搭建环境<br>        a. 实体类<br>            i. Cat<br>            public class Cat {<br>                public void shout(){<br>                    System.out.println(“miao~”);<br>                }</p>
+<pre><code>    }
+    ii. Dog
+    public class Dog {
+        public void shout(){
+            System.out.println(&quot;wang~&quot;);
+        }
+    }
+    iii. People（getterandsetter，toString）
+    public class People {
+        private Cat cat;
+        private     Dog dog;
+        private String name;
+    }
+b. beans.xml
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+    &lt;bean id=&quot;cat&quot; class=&quot;xx.xx.pojo.Cat&quot;/&gt;
+    &lt;bean id=&quot;dog&quot; class=&quot;xx.xx.pojo.Dog&quot;/&gt;
+    &lt;!--ByName:会自动在容器上下文中查找，和自己对象set方法后面的值对应的 bean id--&gt;
+    &lt;bean id=&quot;people&quot; class=&quot;xx.xx.pojo.People&quot; &gt;
+        &lt;property name=&quot;name&quot; value=&quot;阜螽&quot;/&gt;
+        &lt;property name=&quot;dog&quot; ref=&quot;dog&quot;/&gt;
+        &lt;property name=&quot;cat&quot; ref=&quot;cat&quot;/&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;
+c. 测试类
+    i. 代码
+    public class MyTest {
+        @Test
+        public void test(){
+            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+            People people = context.getBean(&quot;people&quot;, People.class);
+            people.getDog().shout();
+            people.getCat().shout();
+
+        }
+    }
+    ii. 结果</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-00.png" alt></p>
+<pre><code>5. ByName自动装配（只能小写）
+    a. 代码
+           &lt;bean id=&quot;cat&quot; class=&quot;xx.xx.pojo.Cat&quot;/&gt;
+           &lt;bean id=&quot;dog&quot; class=&quot;xx.xx.pojo.Dog&quot;/&gt;
+    &lt;!--ByName:会自动在容器上下文中查找，和自己对象set方法后面的值对应的 beanid（要对应被装配类中属性的名称且开头必须小写）--&gt;
+        &lt;bean id=&quot;people&quot; class=&quot;xx.xx.pojo.People&quot; autowire=&quot;byName&quot;&gt;
+            &lt;property name=&quot;name&quot; value=&quot;阜螽&quot;/&gt;
+            &lt;!--&lt;property name=&quot;dog&quot; ref=&quot;dog&quot;/&gt;
+            &lt;property name=&quot;cat&quot; ref=&quot;cat&quot;/&gt;--&gt;
+        &lt;/bean&gt;
+    b. 结果</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-11.png" alt></p>
+<pre><code>6. ByType
+    a. 代码
+        &lt;bean id=&quot;cat&quot; class=&quot;xx.xx.pojo.Cat&quot;/&gt;
+        &lt;bean id=&quot;dog101&quot; class=&quot;xx.xx.pojo.Dog&quot;/&gt;
+        &lt;!--ByType:会自动在容器上下文中查找，和自己对象属性类型相同的 bean--&gt;
+        &lt;bean id=&quot;people&quot; class=&quot;xx.xx.pojo.People&quot; autowire=&quot;byType&quot;&gt;
+            &lt;property name=&quot;name&quot; value=&quot;阜螽&quot;/&gt;
+        &lt;/bean&gt;
+    b. 结果</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-34-31.png" alt></p>
+<pre><code>7. 小结
+    a. ByName：要求所有bean的id唯一，且这个bean需要和自动注入的属性的set方法的值一致。
+    b. ByType：要求所有bean的class唯一，且这个bean需要和自动注入的属性的类型一致。
+
+三：注解实现自动装配
+1. Jdk1.5 Spring2.5支持注解
+2. 使用注解须知
+    a. 导入约束
+        i. context约束
+    b. 配置注解的支持：context:annotation-config
+    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+    &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+        xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+            https://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            https://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+
+        &lt;context:annotation-config/&gt;
+
+    &lt;/beans&gt;
+    c. 所以
+        i. Bean.xml
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+               xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+               xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+               xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                https://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                https://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+
+            &lt;!--注解支持--&gt;
+            &lt;context:annotation-config/&gt;
+            &lt;!--注解实现自动装配--&gt;
+            &lt;bean id=&quot;cat&quot; class=&quot;cn.wf.pojo.Cat&quot;/&gt;
+            &lt;bean id=&quot;dog&quot; class=&quot;cn.wf.pojo.Dog&quot;/&gt;
+            &lt;bean id=&quot;people&quot; class=&quot;cn.wf.pojo.People&quot;/&gt;
+        &lt;/beans&gt;
+        ii. 实体类</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-36-14.png" alt></p>
+<pre><code>iii. 测试
+    1) 代码
+    public class MyTest {
+        @Test
+        public void test(){
+            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+            People people = context.getBean(&quot;people&quot;, People.class);
+            people.getDog().shout();
+            people.getCat().shout();
+
+        }
+    }
+    2) 结果</code></pre><p><img src="/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/2020-05-16-22-36-30.png" alt></p>
+<pre><code>d. 对注解的说明
+    i.  @Autowired
+        1) 直接在属性上使用。也可以在set方法上使用。
+        2) 使用 @Autowired注解，可以在实体类中省略编写set方法。但自动装配的属性在IOC中存在且符合名字byname。
+    ii. 拓展
+        1) @Nullable：字段可为null
+              public void setCat(@Nullable Cat cat) {
+                    this.cat = cat;
+                }
+        2)  @Autowired中可以设置字段为null
+            public @interface Autowired {
+                boolean required() default true;
+            }
+
+        3) 测试：如果显示的定义： @Autowired(required = false)，说明这个对象可以为null，否则不为null。
+            public class People {
+                @Autowired(required = false)
+                private Cat cat;
+                @Autowired
+                private Dog dog;
+                private String name;
+            }
+e. 如果自动装配环境比较复杂，自动装配无法通过一个注解【@Autowired】完成的时候，可以使用【@Qualifier（value = xxx）】，指定一个唯一的bean对象的注入。
+    i. 比如如下复杂环境
+    &lt;bean id=&quot;dog11&quot; class=&quot;cn.wf.pojo.Dog&quot;/&gt;
+    &lt;bean id=&quot;dog101&quot; class=&quot;cn.wf.pojo.Dog&quot;/&gt;
+    ii. 解决方案
+     @Autowired
+     @Qualifier(value = &quot;dog101&quot;)
+     private Dog dog;
+f. @Resource注解（java实现自动装配）
+    public class People {
+        @Resource（name = “cat2”）
+        private Cat cat;
+         @Resource
+        private Dog dog;
+        private String name;
+    }
+g. 小结
+    i. @Resource和@Autowired的区别
+        1) 都是用来实现自动装配的，都可以放置在属性字段之上
+        2) @Autowired：默认通过byType的方式实现，而且必须要求这个对象存在。如果不能唯一自动装配，则使用@Qualifier通过byname【常用】
+        3) @Resource：默认通过byname的方式实现，如果找不到名字，则通过byType实现。如果都找不到的情况下，不错。【常用】
+    ii. 执行顺序不同
+        1) @Autowired：默认通过byType的方式实现，如果不行，byname
+        2) @Resource：默认通过byname的方式实现，如果不行，byType</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>阁下高义<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechatpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">java-Mybatis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java-Spring</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/17/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/05/17/%E7%94%B1%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E5%88%B0AOP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          由代理模式到AOP
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/05/17/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring配置优化和DI依赖注入</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#不同方式实现装配和使用注解简化代码"><span class="toc-number">1.</span> <span class="toc-text">不同方式实现装配和使用注解简化代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Bean-的相关操作"><span class="toc-number">1.1.</span> <span class="toc-text">Bean 的相关操作</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -232,9 +563,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -387,100 +718,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://www.2345daohang.com/dianji/63426/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://www.aisixiang.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="https://www.bilibili.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
-
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
-  	  	
-    	</section>
-    
-  </div>
-  
-</div>
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-  </div>
-</body>
-</html><i class="icon-quo-left icon"></i>友情链接4</a>
             </li>
           
             <li class="search-li">
