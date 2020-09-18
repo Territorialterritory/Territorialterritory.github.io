@@ -6,34 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>相约春天 | territorialterritory</title>
+  <title>Mybatis之复杂查询 | territorialterritory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="初识Spring，了解IOC">
+  <meta name="description" content="Mybatis复杂查询下的一和多">
 <meta property="og:type" content="article">
-<meta property="og:title" content="相约春天">
-<meta property="og:url" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/index.html">
+<meta property="og:title" content="Mybatis之复杂查询">
+<meta property="og:url" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/index.html">
 <meta property="og:site_name" content="territorialterritory">
-<meta property="og:description" content="初识Spring，了解IOC">
+<meta property="og:description" content="Mybatis复杂查询下的一和多">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-31-59.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-34-06.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-34-43.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-35-26.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-36-37.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-36-59.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-39-20.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-41-27.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-41-42.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-42-03.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-43-44.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-45-15.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-45-38.png">
-<meta property="article:published_time" content="2020-04-30T22:13:58.000Z">
-<meta property="article:modified_time" content="2020-05-16T13:46:15.872Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-22-55-25.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-22-56-46.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-22-57-05.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-04-04.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-04-35.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-07-05.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-10-50.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-11-59.png">
+<meta property="article:published_time" content="2020-04-19T14:49:26.000Z">
+<meta property="article:modified_time" content="2020-04-19T15:12:38.458Z">
 <meta property="article:author" content="雍朔">
-<meta property="article:tag" content="java-Spring">
+<meta property="article:tag" content="Java-Mybatis">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-31-59.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-22-55-25.png">
   
     <link rel="alternative" href="/atom.xml" title="territorialterritory" type="application/atom+xml">
   
@@ -167,247 +162,272 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-相约春天" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mybatis之复杂查询" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      相约春天
+      Mybatis之复杂查询
     </h1>
   
 
         
-        <a href="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/" class="archive-article-date">
-  	<time datetime="2020-04-30T22:13:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
+        <a href="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
+  	<time datetime="2020-04-19T14:49:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="初识Spring，了解IOC"><a href="#初识Spring，了解IOC" class="headerlink" title="初识Spring，了解IOC"></a>初识Spring，了解IOC</h2><a id="more"></a>
-<h3 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h3><pre><code>一：spring起源于：interface21框架（2002年）
-    1. Spring 理念：使现有的技术更加容易使用，整合了现有的技术框架。
-        ◆目的：解决企业应用开发的复杂性
-        ◆功能：使用基本的JavaBean代替EJB，并提供了更多的企业应用功能
-        ◆范围：任何Java应用
+        <h1 id="Mybatis复杂查询下的一和多"><a href="#Mybatis复杂查询下的一和多" class="headerlink" title="Mybatis复杂查询下的一和多"></a>Mybatis复杂查询下的一和多</h1><a id="more"></a>
 
-    2. 两套框架
-        a. SSH：Struct2+Spring+Hibernate
-        b. SSM：Spring+SpringMVC+Mybatis
-    3. 学习Spring
-        a. 官网：https://spring.io/
-        b. 依赖：
-
-            &lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc --&gt;
-            &lt;dependency&gt;
-                &lt;groupId&gt;org.springframework&lt;/groupId&gt;
-                &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
-                &lt;version&gt;5.2.5.RELEASE&lt;/version&gt;
-            &lt;/dependency&gt;
-
-
-    4. 优点
-        a. Spring 是一个开源的免费的框架（容器）
-        b. Spring是一个轻量级的，非入侵式的框架
-        c. 控制反转（IOC）和 面向切面编程（AOP）
-        d. 支持事务的处理，对框架整合的支持
-    总结：Spring是一个轻量级控制反转(IoC)和面向切面(AOP)的容器框架。
-
-
-    5. 组成</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-31-59.png" alt></p>
-<pre><code>    a. 核心容器（Spring Core）
-
-    　　核心容器提供Spring框架的基本功能。Spring以bean的方式组织和管理Java应用中的各个组件及其关系。Spring使用BeanFactory来产生和管理Bean，它是工厂模式的实现。BeanFactory使用控制反转(IoC)模式将应用的配置和依赖性规范与实际的应用程序代码分开。
-
-    b. 应用上下文（Spring Context）
-
-    　　Spring上下文是一个配置文件，向Spring框架提供上下文信息。Spring上下文包括企业服务，如JNDI、EJB、电子邮件、国际化、校验和调度功能。
-
-    c. Spring面向切面编程（Spring AOP）
-
-    　　通过配置管理特性，Spring AOP 模块直接将面向方面的编程功能集成到了 Spring框架中。所以，可以很容易地使 Spring框架管理的任何对象支持 AOP。Spring AOP 模块为基于 Spring 的应用程序中的对象提供了事务管理服务。通过使用 Spring AOP，不用依赖 EJB 组件，就可以将声明性事务管理集成到应用程序中。
-
-    d. JDBC和DAO模块（Spring DAO）
-
-    　　JDBC、DAO的抽象层提供了有意义的异常层次结构，可用该结构来管理异常处理，和不同数据库供应商所抛出的错误信息。异常层次结构简化了错误处理，并且极大的降低了需要编写的代码数量，比如打开和关闭链接。
-
-    e. 对象实体映射（Spring ORM）
-
-    　　Spring框架插入了若干个ORM框架，从而提供了ORM对象的关系工具，其中包括了Hibernate、JDO和 IBatis SQL Map等，所有这些都遵从Spring的通用事物和DAO异常层次结构。
-
-    f. Web模块（Spring Web）
-
-    　　Web上下文模块建立在应用程序上下文模块之上，为基于web的应用程序提供了上下文。所以Spring框架支持与Struts集成，web模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。
-
-    g. MVC模块（Spring Web MVC）
-
-    　　MVC框架是一个全功能的构建Web应用程序的MVC实现。通过策略接口，MVC框架变成为高度可配置的。MVC容纳了大量视图技术，其中包括JSP、POI等，模型来有JavaBean来构成，存放于m当中，而视图是一个街口，负责实现模型，控制器表示逻辑代码，由c的事情。Spring框架的功能可以用在任何J2EE服务器当中，大多数功能也适用于不受管理的环境。Spring的核心要点就是支持不绑定到特定J2EE服务的可重用业务和数据的访问的对象，毫无疑问这样的对象可以在不同的J2EE环境，独立应用程序和测试环境之间重用。
-
-6. 扩展：Spring式现代化的Java开发
-    a. SpringBoot：构建一切
-        i. 一个快速开发的脚手架
-        ii. 基于SpringBoot可以快速开发单个微服务
-        iii. 约定大于配置
-    b. SpringCloud：协调一切
-        i. 基于SpringBoot实现
-    c. SpringCloudDataFlow：连接一切
-    d. 弊端：由于Spring的过度整合发展，体积变大，配置繁杂，人称“配置地狱”。</code></pre><h3 id="认识IOC"><a href="#认识IOC" class="headerlink" title="认识IOC"></a>认识IOC</h3><pre><code>一：IOC理论推导
-    1. 原来实现业务：
-        a. Dao接口
-        b. DaoImpl实现类
-        c. Service业务接口
-        d. ServiceImpl业务实现类
-    在这种情况下，程序是主动创建对象，控制权在程序员手上</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-34-06.png" alt></p>
-<pre><code>如果使用set注入后，程序不在拥有主动性，变成了被动接受。在这个过程中，完成了一次控制权的转移。
-从而，解决问题，程序员不用再去管理对象的创建。系统的耦合性减低，可以更加专注在业务上。---IOC原型</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-34-43.png" alt>       </p>
-<pre><code>2. IOC本质
-    a. 控制反转（Inversion of Control，缩写为IoC）是一种设计思想，DI（依赖注入）是实现IOC的一种方法</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-35-26.png" alt><br><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-36-37.png" alt>            </p>
-<pre><code>b. IOC是Spring的核心内容，可以用配置，注解，甚至零配置实现。</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-36-59.png" alt></p>
-<pre><code>        i. 采用XML方式配置Bean的时候，Bean的定义信息是和现实分离的，而采用注解的方式可以将两者合为一体，
-        Bean的定义信息直接以注解的形式定义在实现类中，从而达到零配置的目的。
-        ii. 总结：控制反转是一种通过描述（XML或注解）并通过第三方去生产或获取特定对象的方式。
-        在Spring中实现控制反转的是IOC容器，其实现方法是依赖注入（Dependency Injection ,DI）。
-3. 写一个例子（以xml配置文件的方式实现）
-    a. 创建实体类
-    public class Hello {
-        private String str;
-
-        public String getStr() {
-            return str;
-        }
-
-        public void setStr(String str) {
-            this.str = str;
-        }
-
-        @Override
-        public String toString() {
-            return &quot;Hello{&quot; +
-                    &quot;str=&apos;&quot; + str + &apos;\&apos;&apos; +
-                    &apos;}&apos;;
-        }
-    }
-
-    b. 创建Spring的配置文件
-    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-    &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-        xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
-            https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
-    &lt;!--使用spring创建对象，在spring中这些读称为Bean
-    原来：
-    类型 变量名 = new 类型（）；
-    Hello hello = new Hello（）；
-    在Bean中：
-    id = 变量名（唯一标识符）
-    class = new 的对象
-    property = 相当于给对象中的属性设置一个值
-    即：对象由Spring创建并且给属性赋值
-    --&gt;
-        &lt;bean id=&quot;hello&quot; class=&quot;xx.xx.pojo.Hello&quot;&gt;
-            &lt;property name=&quot;str&quot; value=&quot;Spring&quot;/&gt;
-        &lt;/bean&gt;
-    &lt;/beans&gt;
-
-    c. 测试
-        i. 代码
-        public class MyTest {
-            public static void main(String[] args) {
-                //获取Spring的上下文对象
-                ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
-                //我们的对象都在Spring中管理了。要使用，直接去容器中取出即可
-                Hello hello = (Hello) context.getBean(&quot;hello&quot;);
-                System.out.println(hello.toString());
+<h2 id="一：多对一"><a href="#一：多对一" class="headerlink" title="一：多对一"></a>一：多对一</h2><h3 id="1-举一个例子来表示多对一"><a href="#1-举一个例子来表示多对一" class="headerlink" title="1.举一个例子来表示多对一"></a>1.举一个例子来表示多对一</h3><p>相信许多人在看电影的时候都见过多个男学生欺负一个女老师的情景，不错那就是多对一。</p>
+<p><img src="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-22-55-25.png" alt></p>
+<h3 id="2-那在Mybatis中如何理解多对一？"><a href="#2-那在Mybatis中如何理解多对一？" class="headerlink" title="2.那在Mybatis中如何理解多对一？"></a>2.那在Mybatis中如何理解多对一？</h3><pre><code>1. 设计数据库
+    a. 创建学生表</code></pre><p><img src="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-22-56-46.png" alt></p>
+<pre><code>b. 创建老师表</code></pre><p><img src="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-22-57-05.png" alt></p>
+<pre><code>2. 搭建环境
+    a. 导包（Lombok）
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+            &lt;version&gt;1.18.10&lt;/version&gt;
+        &lt;/dependency&gt;
+    b. 编写实体类
+        i. 学生实体类
+            @Data
+            public class Student {
+                private int id;
+                private String name;
+                //学生关联一个老师
+                private Teacher teacher;
             }
-        }
+        ii. 老师实体类
+            @Data
+            public class Teacher {
+                private int id;
+                private String name;
+            }
+    c. 编写Mapper接口
+        i. 学生接口
+                public interface StudentMapper {
 
-        ii. 结果</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-39-20.png" alt></p>
-<pre><code>4. 小总结
-    a. 实体类中的对象由Spring创建，对象的属性由Spring容器设置---控制反转
-    b. 控制：对象的创建和属性的赋值由传统程序控制转移到Spring控制
-    c. 反转：程序本身将不再创建对象，而是被动的接受由Spring创建，管理，装配的对象。
-    d. 依赖注入：利用set方法注入。
-5. 源码追踪
-    a. 继承关系</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-41-27.png" alt></p>
-<pre><code>b. 实现类</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-41-42.png" alt></p>
-<pre><code>6. 将1中的实例进行修改，利用IOC实现
-    a. 编写配置文件
-    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-    &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-        xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
-            https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
-        &lt;bean id=&quot;killerImpl&quot; class=&quot;xx.xx.dao.UserKillerImpl&quot;/&gt;
-        &lt;bean id=&quot;firstBloodImpl&quot; class=&quot;xx.xx.dao.UserFirstBloodImpl&quot;/&gt;
-        &lt;bean id=&quot;UserServiceImpl&quot; class=&quot;xx.xx.service.UserServiceImpl&quot;&gt;
-                &lt;property name=&quot;userDao&quot; ref=&quot;firstBloodImpl&quot;/&gt;
-        &lt;/bean&gt;
-    &lt;/beans&gt;</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-42-03.png" alt></p>
-<pre><code>b. 测试
-    i. 代码
-    public class MyTest {
-        public static void main(String[] args) {
-            /*//用户实际调用的是业务层，dao层用户不需要接触
-            UserService userService = new UserServiceImpl();
+                }
+        ii. 老师接口
+                public interface TeacherMapper {
 
-            ((UserServiceImpl) userService).setUserDao( new UserFirstBloodImpl());
-            userService.getUser();
-        }*/
+                }
+    d. 编写Mapper.xml配置文件
+        i. 学生配置文件
+            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+            &lt;!DOCTYPE mapper
+                PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;
+                &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;
+            &lt;mapper namespace=&quot;xx.xx.dao.StudentMapper&quot;&gt;
 
-            //利用Sprin来测试
-            //获取ApplicationContext；
-            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+            &lt;/mapper&gt;
+        ii. 老师配置文件
+            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+            &lt;!DOCTYPE mapper
+                PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;
+                &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;
+            &lt;mapper namespace=&quot;xx.xx.dao.TeacherMapper&quot;&gt;
 
-            UserServiceImpl userServiceImpl = (UserServiceImpl) context.getBean(&quot;UserServiceImpl&quot;);
-            userServiceImpl.getUser();
-
-            /**
-            *如果再有什么需求，将不再需要修改代码和程序，只需要再配置文件中修改即可。
-            */
-        }
-    }
-
-    ii. 结果</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-43-44.png" alt></p>
-<pre><code>7. IOC创建对象的方式
-    a. 无参构造
-    &lt;!--无参构造的注入--&gt;
-        &lt;property name=&quot;name&quot; value=&quot;屠龙&quot;/&gt;
-
-    b. 有参构造
-        i. 第一种
-        &lt;!--有参构造，第一种，下表赋值--&gt;
-            &lt;constructor-arg index=&quot;0&quot; value=&quot;天屠&quot;/&gt;
-        ii. 第二种
-        &lt;!--第二种 根据类型传参（不建议，当存在两个以上的相同类型时，如何分辨）--&gt;
-            &lt;constructor-arg type=&quot;java.lang.String&quot; value=&quot;地屠&quot;/&gt;
-        iii. 第三种
-        &lt;!--第三种 直接通过参数名设置--&gt;
-            &lt;constructor-arg name=&quot;name&quot; value=&quot;人屠&quot;/&gt;
-        iv. 扩：新建一个实体类（无参）
-            1) 再beans.xml中同时有/无参注入
-            &lt;bean id=&quot;user&quot; class=&quot;cn.wf.pojo.User&quot;&gt;
-                &lt;!--第三种 直接通过参数名设置--&gt;
-                &lt;constructor-arg name=&quot;name&quot; value=&quot;人屠&quot;/&gt;
-            &lt;/bean&gt;
-                &lt;bean id=&quot;userS&quot; class=&quot;xx.xx.pojo.UserSecond&quot;&gt;
-
-                &lt;/bean&gt;
-
-            2) 测试
-                a) 代码
-                public static void main(String[] args) {
-                        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
-                        User user = (User) context.getBean(&quot;user&quot;);
-                        user.show();
+            &lt;/mapper&gt;
+3. 添加业务
+    a. 按查询嵌套处理
+        i. 在StudentMapper接口中添加方法
+            1) 需求：查询所有学生及对应老师的信息
+                public List&lt;Student&gt; getStudent();
+        ii. 在对应的xml中编写sql
+            1) 思路：
+                a) 获取所有学生的信息
+                b) 根据获取的学生的信息中对应的老师的id---&gt;获取老师的信息
+                c) 考虑：通过以上方法获取的老师信息肯定包含在学生信息结果集中，那怎么办？
+                d) 在纯数据库中遇到这样的问题，一般用关联查询或子查询。在Mybatis中该怎么处理？
+                    i) 在查询Student信息的基础上，编写一个结果集映射StudentTeacher
+                    ii) StudentTeacher结果集的类型为Student
+                    iii) 学生信息中有老师这一属性名为teacher，对应的数据库中的字段名为tid
+                    iv) 根据tid查询出老师的信息
+                    v) 所以：多个学生关联一个老师---&gt;多对一
+             &lt;!--按照查询嵌套处理  子查询(根据学生的id查询老师的id)--&gt;
+                &lt;select id=&quot;getStudent&quot; resultMap=&quot;StudentTeacher&quot;&gt;
+                    select * from student;
+                &lt;/select&gt;
+                &lt;resultMap id=&quot;StudentTeacher&quot; type=&quot;Student&quot;&gt;
+                    &lt;result property=&quot;id&quot; column=&quot;id&quot;/&gt;
+                    &lt;result property=&quot;name&quot; column=&quot;name&quot;/&gt;
+                    &lt;!--复杂的属性，我们需要单都处理
+                        对象：association
+                        集合：collection
+                    --&gt;
+                   &lt;!--association：关联属性 property：属性名 javaType：属性类型 column：再多的一方的表中的列名--&gt;
+                    &lt;association property=&quot;teacher&quot; column=&quot;tid&quot; javaType=&quot;Teacher&quot; select=&quot;getTeacher&quot;/&gt;
+                &lt;/resultMap&gt;
+                &lt;!--
+                    这里传递过来的id，只有一个属性的时候可以写任何值
+                    association中column多参数配置
+                    column=&quot;{key=value,key=value}&quot;
+                    其实就是kv形式，k是传给下个sql的取值名称，v是片段一中sql查询的字段名。
+                 --&gt;
+                &lt;select id=&quot;getTeacher&quot; resultType=&quot;Teacher&quot;&gt;
+                    select  * from teacher where id = #{tid};
+                &lt;/select&gt;
+        iii. 在核心配置文件中注册Mapper
+            &lt;!--绑定接口--&gt;
+             &lt;mappers&gt;
+                &lt;mapper class=&quot;xx.xx.dao.TeacherMapper&quot;/&gt;
+                &lt;mapper class=&quot;xx.xx.dao.StudentMapper&quot;/&gt;
+             &lt;/mappers&gt;
+        iv. 测试
+            1) 代码：
+                 @Test
+                    public void testStudent(){
+                        SqlSession sqlSession = MybatisUtils.getSqlSession();
+                        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+                        List&lt;Student&gt; studentList = mapper.getStudent();
+                        for (Student student : studentList) {
+                            System.out.println(student);
+                        }
+                        sqlSession.close();
                     }
+            2) 结果：
+                a)         </code></pre><p><img src="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-04-04.png" alt></p>
+<pre><code>b) </code></pre><p><img src="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-04-35.png" alt></p>
+<pre><code>    v. 拓展：子查询和关联查询的区别
+        子查询就是查询中又嵌套的查询,表连接都可以用子查询，但不是所有子查询都能用表连接替换，
+        子查询比较灵活，方便，形式多样，适合用于作为查询的筛选条件，而表连接更适合与查看多表的数据。
+        子查询不一定需要两个表有关联字段，而连接查询必须有字段关联（所谓的主外键关系）
+        1，表关联的效率要高于子查询，因为子查询走的是笛卡尔积
+        2，表关联可能有多条记录，子查询只有一条记录，如果需要唯一的列，最好走子查询
+        3，对于数据量多的肯定是用连接查询快些，原因：因为子查询会多次遍历所有的数据（视你的子查询的层次而定），而连接查询只会遍历一次。
 
-                b) 结果</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-45-15.png" alt></p>
-<pre><code>c. 总结
-    i. 再配置文件加载的时候，容器中管理的对象就已经初始化了。
-    ii. 例如：</code></pre><p><img src="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/2020-05-16-21-45-38.png" alt></p>
+        注：但是数据量少的话也就无所谓是连接查询还是子查询，视自己的习惯而定。一般情况下还是用子查询来的好，容易控制。
+
+b. 按结果嵌套处理（多表查询）
+    i. 在StudentMapper接口中添加方法
+         public List&lt;Student&gt; getStudent2();
+    ii. 在对应的xml中编写sql
+        &lt;!--按照结果查询处理--&gt;
+            &lt;select id=&quot;getStudent2&quot; resultMap=&quot;StudentTeacher2&quot;&gt;
+                select s.id sid,s.name sname,t.name tname
+                from student s,teacher t
+                where s.tid = t.id;
+            &lt;/select&gt;
+            &lt;resultMap id=&quot;StudentTeacher2&quot; type=&quot;Student&quot;&gt;
+                &lt;result property=&quot;id&quot; column=&quot;sid&quot;/&gt;
+                &lt;result property=&quot;name&quot; column=&quot;sname&quot;/&gt;
+                &lt;association property=&quot;teacher&quot; javaType=&quot;Teacher&quot;&gt;
+                    &lt;result property=&quot;name&quot; column=&quot;tname&quot;/&gt;
+                &lt;/association&gt;
+            &lt;/resultMap&gt;
+    iii. 在核心配置文件中注册Mapper
+    iv. 测试
+        1) 代码：
+            @Test
+                public void testStudent2(){
+                    SqlSession sqlSession = MybatisUtils.getSqlSession();
+                    StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+                    List&lt;Student&gt; studentList2 = mapper.getStudent2();
+                    for (Student student : studentList2) {
+                        System.out.println(student);
+                    }
+                    sqlSession.close();
+                }
+        2) 结果：</code></pre><p><img src="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-07-05.png" alt></p>
+<h2 id="二：一对多"><a href="#二：一对多" class="headerlink" title="二：一对多"></a>二：一对多</h2><p> 一对多刚好相反，是一个男老师欺负多个女学生，嘿嘿这就是一对多</p>
+<pre><code>1. 这里新建一个module
+    a. 数据库不变
+    b. 环境搭建除实体类外其他相同
+        i. 学生实体类
+        @Data
+        public class Student {
+            private int id;
+            private String name;
+            private int tid;
+        }
+        ii. 老师实体类
+        @Data
+        public class Teacher {
+            private int id;
+            private String name;
+            //一个老师包含多个学生
+            private List&lt;Student&gt; students;
+        }
+2. 添加业务
+    a. 按结果嵌套处理
+        i. 编写TeacherMapper接口方法
+            //获取指定老师下的所有学生信息
+            Teacher getTeacher(@Param(&quot;tid&quot;) int id);
+        ii. 编写相应的xml配置文件
+        &lt;!--
+            考虑：
+                1.从学生表和老师表中查出学生的id，姓名，老师的姓名
+                2.对查询出来的做结果集映射
+        --&gt;
+            &lt;!--按结果嵌套查询--&gt;
+            &lt;select id=&quot;getTeacher&quot; resultMap=&quot;TeacherStudent&quot;&gt;
+                select s.id sid,s.name sname,t.name tname,t.id tid
+                from student s,teacher t
+                where s.tid = t.id and t.id = #{tid};
+            &lt;/select&gt;
+            &lt;resultMap id=&quot;TeacherStudent&quot; type=&quot;Teacher&quot;&gt;
+                &lt;result property=&quot;id&quot; column=&quot;tid&quot;/&gt;
+                &lt;result property=&quot;name&quot; column=&quot;tname&quot;/&gt;
+                &lt;!--
+                集合用 collection
+                javaType和ofType对是用来指定对象类型的
+                javaType=&quot;&quot;：用来指定pojo中属性的类型
+                ofType=&quot;&quot;：指定的是映射到list集合属性中pojo的类型
+                集合中的泛型信息，使用ofType获取
+                --&gt;
+                &lt;collection property=&quot;students&quot; ofType=&quot;Student&quot;&gt;
+                    &lt;result property=&quot;id&quot; column=&quot;sid&quot;/&gt;
+                    &lt;result property=&quot;name&quot; column=&quot;sname&quot;/&gt;
+                    &lt;result property=&quot;tid&quot; column=&quot;tid&quot;/&gt;
+                &lt;/collection&gt;
+            &lt;/resultMap&gt;
+        iii. 注册Mapper
+        iv. 测试
+            @Test
+            public void test(){
+                SqlSession sqlSession = MybatisUtils.getSqlSession();
+                TeacherMapper mapper = sqlSession.getMapper(TeacherMapper.class);
+                Teacher teacher = mapper.getTeacher(1);
+                System.out.println(teacher);
+                sqlSession.close();
+            }</code></pre><p><img src="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-10-50.png" alt></p>
+<pre><code>b. 按查询嵌套处理
+    i. 接口方法
+        Teacher getTeacher2(@Param(&quot;tid&quot;) int id);
+    ii. xml配置文件
+        &lt;!--子查询--&gt;
+        &lt;select id=&quot;getTeacher2&quot; resultMap=&quot;TeacherStudent2&quot;&gt;
+            select * from teacher where id = #{tid};
+        &lt;/select&gt;
+        &lt;resultMap id=&quot;TeacherStudent2&quot; type=&quot;Teacher&quot;&gt;
+            &lt;collection property=&quot;students&quot; javaType=&quot;ArrayList&quot; ofType=&quot;Student&quot; select=&quot;getStudentByTeacherId&quot; column=&quot;id&quot;/&gt;
+        &lt;/resultMap&gt;
+        &lt;select id=&quot;getStudentByTeacherId&quot; resultType=&quot;Student&quot;&gt;
+            select * from student where tid = #{tid};
+        &lt;/select&gt;
+    iii. 测试
+    @Test
+        public void test2() {
+            SqlSession sqlSession = MybatisUtils.getSqlSession();
+            TeacherMapper mapper = sqlSession.getMapper(TeacherMapper.class);
+            Teacher teacher = mapper.getTeacher2(1);
+            System.out.println(teacher);
+            sqlSession.close();
+        }</code></pre><p><img src="/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/2020-04-19-23-11-59.png" alt></p>
+<p>三：总结</p>
+<ol>
+<li>在复杂查询的情况下，尽可能保持编写 高性能，高可读的sql</li>
+<li>字段和属性：不一致和对应问题</li>
+</ol>
 
       
 
@@ -452,7 +472,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java-Spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java-Mybatis</a>
         		</li>
       		
 		</ul>
@@ -508,7 +528,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/19/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -522,18 +542,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/17/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/20/Mybatis-%E5%8A%A8%E6%80%81sql/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Spring配置优化和DI依赖注入
+          Mybatis-动态sql
         
       </div>
     </a>
   
   
-    <a href="/2020/04/22/Mybatis%E7%BC%93%E5%AD%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mybatis缓存</div>
+    <a href="/2020/04/18/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mybatis配置解析及属性优化</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -560,7 +580,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初识Spring，了解IOC"><span class="toc-number">1.</span> <span class="toc-text">初识Spring，了解IOC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring简介"><span class="toc-number">1.1.</span> <span class="toc-text">Spring简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#认识IOC"><span class="toc-number">1.2.</span> <span class="toc-text">认识IOC</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mybatis复杂查询下的一和多"><span class="toc-number">1.</span> <span class="toc-text">Mybatis复杂查询下的一和多</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一：多对一"><span class="toc-number">1.1.</span> <span class="toc-text">一：多对一</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-举一个例子来表示多对一"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.举一个例子来表示多对一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-那在Mybatis中如何理解多对一？"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.那在Mybatis中如何理解多对一？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二：一对多"><span class="toc-number">1.2.</span> <span class="toc-text">二：一对多</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -686,15 +706,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java-Spring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java-springMVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java-Spring</a>
               </li>
             
             <div class="clearfix"></div>
@@ -746,27 +766,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="https://www.codesheep.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://www.codesheep.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>codesheep</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>liaoxuefeng</a>
             </li>
           
             <li class="search-li">
-              <a href="https://blog.csdn.net/wangshuaiwsws95" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://blog.csdn.net/wangshuaiwsws95" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>wangshuaiwsws95</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.2345daohang.com/dianji/63426/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://www.2345daohang.com/dianji/63426/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>2345daohang</a>
             </li>
           
             <li class="search-li">
-              <a href="http://www.aisixiang.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="http://www.aisixiang.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>aisixiang</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.bilibili.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://www.bilibili.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>bilibili</a>
             </li>
           
         </ul>

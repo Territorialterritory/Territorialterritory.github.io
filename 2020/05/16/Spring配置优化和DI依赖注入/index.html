@@ -6,33 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>数据传输格式 | territorialterritory</title>
+  <title>Spring配置优化和DI依赖注入 | territorialterritory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="神奇的数据交换中间人-JSON">
+  <meta name="description" content="一切为了简化和解耦">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据传输格式">
-<meta property="og:url" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/index.html">
+<meta property="og:title" content="Spring配置优化和DI依赖注入">
+<meta property="og:url" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/index.html">
 <meta property="og:site_name" content="territorialterritory">
-<meta property="og:description" content="神奇的数据交换中间人-JSON">
+<meta property="og:description" content="一切为了简化和解耦">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-49.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-59.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-35.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-47.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-55.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-05-02.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-05-51.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-01.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-30.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-41.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-57.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-08-59.png">
-<meta property="article:published_time" content="2020-05-16T23:13:24.000Z">
-<meta property="article:modified_time" content="2020-05-16T17:04:09.495Z">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-18-43.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-01.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-18.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-33.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-40.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-23-55.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-06.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-42.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-51.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-25-16.png">
+<meta property="article:published_time" content="2020-05-16T13:57:46.000Z">
+<meta property="article:modified_time" content="2020-05-16T14:25:46.132Z">
 <meta property="article:author" content="雍朔">
-<meta property="article:tag" content="java-springMVC">
+<meta property="article:tag" content="java-Spring">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-49.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-18-43.png">
   
     <link rel="alternative" href="/atom.xml" title="territorialterritory" type="application/atom+xml">
   
@@ -166,336 +164,269 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据传输格式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Spring配置优化和DI依赖注入" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据传输格式
+      Spring配置优化和DI依赖注入
     </h1>
   
 
         
-        <a href="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-05-16T23:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+        <a href="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/" class="archive-article-date">
+  	<time datetime="2020-05-16T13:57:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="神奇的数据交换中间人-JSON"><a href="#神奇的数据交换中间人-JSON" class="headerlink" title="神奇的数据交换中间人-JSON"></a>神奇的数据交换中间人-JSON</h1><a id="more"></a>
-<h2 id="json"><a href="#json" class="headerlink" title="json"></a>json</h2><pre><code>1. json介绍
-    a. JSON(JavaScript Object Notation, JS 对象简谱) 是一种轻量级的数据交换格式。
-    b. 采用完全独立于编程语言的文本格式来存储和表示数据。
-    c. 简洁和清晰的层次结构
-    d.  易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。
-2. 在Java中生成json（controller返回json数据）
-    a. Jackson是一款比较好的json解析工具（阿里的fastjson）
-    b. 例证
-        i. 导入依赖
-               &lt;dependencies&gt;
-                    &lt;!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind --&gt;
-                    &lt;dependency&gt;
-                        &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
-                        &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
-                        &lt;version&gt;2.11.0&lt;/version&gt;
-                    &lt;/dependency&gt;
-                    &lt;dependency&gt;
-                        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-                        &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-                        &lt;version&gt;1.18.10&lt;/version&gt;
-                    &lt;/dependency&gt;
-                &lt;/dependencies&gt;
+        <h1 id="一切为了简化和解耦"><a href="#一切为了简化和解耦" class="headerlink" title="一切为了简化和解耦"></a>一切为了简化和解耦</h1><a id="more"></a>
 
-        ii. 配置web.xml文件
-        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-        &lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
-                 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-                 xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;
-                 version=&quot;4.0&quot;&gt;
-            &lt;!--配置DispatcherServlet--&gt;
-            &lt;servlet&gt;
-                &lt;servlet-name&gt;springmvc&lt;/servlet-name&gt;
-                &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
-                &lt;init-param&gt;
-                    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-                    &lt;param-value&gt;classpath:springmvc-servlet.xml&lt;/param-value&gt;
-                &lt;/init-param&gt;
-                &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-            &lt;/servlet&gt;
-            &lt;servlet-mapping&gt;
-                &lt;servlet-name&gt;springmvc&lt;/servlet-name&gt;
-                &lt;url-pattern&gt;/&lt;/url-pattern&gt;
-            &lt;/servlet-mapping&gt;
+<h2 id="Spring配置"><a href="#Spring配置" class="headerlink" title="Spring配置"></a>Spring配置</h2><pre><code>一：别名（alias）
+    1. 在配置文件中编写
+    &lt;alias name=&quot;user&quot; alias=&quot;userAlias&quot;/&gt;
+    2. 测试
+        a. 代码
+        public class MyTest {
+            public static void main(String[] args) {
+                ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+                //User user = (User) context.getBean(&quot;user&quot;);
+                User user = (User) context.getBean(&quot;userAlias&quot;);
+                user.show();
+        b. 结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-18-43.png" alt>        </p>
+<pre><code>二：Bean的配置
+    1. 在配置文件中编写
+    &lt;!--Bean的配置
+        id：bean的唯一标识符，相当于对象名
+        class：bean对象所对应的全限定类名：包名 + 类名
+        name：别名，可以去多个别名（比alias高级）
+        --&gt;
+        &lt;bean id=&quot;killer&quot; class=&quot;xx.xx.pojo.UserSecond&quot; name=&quot;second,deceiver k2;k3&quot;&gt;
+            &lt;property name=&quot;name&quot; value=&quot;丧钟长鸣&quot;/&gt;
+        &lt;/bean&gt;
+    2. 测试
+        a. 代码
+        public class MyTest {
+            public static void main(String[] args) {
+                ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+                UserSecond user = (UserSecond) context.getBean(&quot;k3&quot;);
+                user.show();
+            }
 
-            &lt;!--springmvc乱码配置--&gt;
-            &lt;filter&gt;
-                &lt;filter-name&gt;encoding&lt;/filter-name&gt;
-                &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;
-                &lt;init-param&gt;
-                    &lt;param-name&gt;enconding&lt;/param-name&gt;
-                    &lt;param-value&gt;utf-8&lt;/param-value&gt;
-                &lt;/init-param&gt;
-            &lt;/filter&gt;
-            &lt;filter-mapping&gt;
-                &lt;filter-name&gt;encoding&lt;/filter-name&gt;
-                &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
-            &lt;/filter-mapping&gt;
-        &lt;/web-app&gt;
-        iii. 配置springmvc-servlet.xml文件
+        }
+
+        b. 结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-01.png" alt></p>
+<pre><code>三：import
+    1. import一般用于团队开发，可以将多个配置文件，导入合并为一个
+    2. 编写配置文件和总配置文件applicationContext.xml，在总配置文件中导入其他配置文件</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-18.png" alt></p>
+<pre><code>3. 测试
+    a. 代码</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-33.png" alt></p>
+<pre><code>b.  结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-19-40.png" alt></p>
+<h2 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h2><pre><code>一：构造器注入
+    a. 无参构造
+        &lt;!--无参构造的注入--&gt;
+        &lt;property name=&quot;name&quot; value=&quot;屠龙&quot;/&gt;
+
+    b. 有参构造
+        i. 第一种
+        &lt;!--有参构造，第一种，下表赋值--&gt;
+            &lt;constructor-arg index=&quot;0&quot; value=&quot;天屠&quot;/&gt;
+        ii. 第二种
+        &lt;!--第二种 根据类型传参（不建议，当存在两个以上的相同类型时，如何分辨）--&gt;
+            &lt;constructor-arg type=&quot;java.lang.String&quot; value=&quot;地屠&quot;/&gt;
+        iii. 第三种
+        &lt;!--第三种 直接通过参数名设置--&gt;
+            &lt;constructor-arg name=&quot;name&quot; value=&quot;人屠&quot;/&gt;
+        iv. 扩：新建一个实体类（无参）
+            1) 再beans.xml中同时有/无参注入
+            &lt;bean id=&quot;user&quot; class=&quot;cn.wf.pojo.User&quot;&gt;
+                &lt;!--第三种 直接通过参数名设置--&gt;
+                &lt;constructor-arg name=&quot;name&quot; value=&quot;人屠&quot;/&gt;
+            &lt;/bean&gt;
+                &lt;bean id=&quot;userS&quot; class=&quot;xx.xx.pojo.UserSecond&quot;&gt;
+
+                &lt;/bean&gt;
+
+二：Set方式诸如人【重点】
+    a. 依赖注入：Set注入
+        i. 依赖：bean对象的创建依赖与容器
+        ii. 注入：bean对象中的所有属性由容器注入
+    b. 环境搭建
+        i. 复杂类型
+        public class Address {
+            private String address;
+
+            public String getAddress() {
+                return address;
+            }
+
+            public void setAddress(String address) {
+                this.address = address;
+            }
+
+            @Override
+            public String toString() {
+                return &quot;Address{&quot; +
+                        &quot;address=&apos;&quot; + address + &apos;\&apos;&apos; +
+                        &apos;}&apos;;
+            }
+        }
+        ii. 真实测试对象
+        public class Student {
+            private String name;
+            private Address address;
+            private String[] books;
+            private List&lt;String&gt; hobbys;
+            private Map&lt;String,String&gt; card;
+            private Set&lt;String&gt; games;
+            private String wife;
+            private Properties info;
+        iii. beans.xml
         &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
         &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-               xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-               xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
-               xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
-               xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
-                        https://www.springframework.org/schema/beans/spring-beans.xsd
-                        http://www.springframework.org/schema/context
-                        https://www.springframework.org/schema/context/spring-context.xsd
-                        http://www.springframework.org/schema/mvc
-                        https://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;&gt;
-            &lt;context:component-scan base-package=&quot;cn.wf.controller&quot;/&gt;
+            xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+            xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
 
-            &lt;!--视图解析器--&gt;
-            &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot; id=&quot;internalResourceViewResolver&quot;&gt;
-                &lt;!--前缀--&gt;
-                &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/jsp/&quot;/&gt;
-                &lt;!--后缀--&gt;
-                &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;/&gt;
+            &lt;bean id=&quot;address&quot; class=&quot;xx.xx.pojo.Address&quot;&gt;
+                &lt;property name=&quot;address&quot; value=&quot;塔里木&quot;/&gt;
             &lt;/bean&gt;
+            &lt;bean id=&quot;student&quot; class=&quot;xx.xx.pojo.Student&quot;&gt;
+                    &lt;!--第一种：普通值注入，value--&gt;
+                    &lt;property name=&quot;name&quot; value=&quot;天籁&quot;/&gt;
+                    &lt;!--第二种：Bean注入 ref--&gt;
+                    &lt;property name=&quot;address&quot; ref=&quot;address&quot;/&gt;
 
-         &lt;/beans&gt;
-
-        iv. 编写实体类
-        @Data
-        @AllArgsConstructor
-        @NoArgsConstructor
-        public class User {
-            private String name;
-            private int age;
-            private String sex;
-        }
-
-        v. 编写controller类
-        @RestController
-        public class UserController {
-            @RequestMapping(&quot;/j1&quot;)
-            public String json1() throws JsonProcessingException {
-                //jackson  objectMapper，创建一个jackson对象
-                ObjectMapper mapper = new ObjectMapper();
-                //创建一个对象
-                User user = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                //将一个对象转换成字符串
-                String s = mapper.writeValueAsString(user);
-                return s;
-            }
-        }
-
-        vi. 配置tomcat测试
-            1) 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-49.png" alt>                    </p>
-<pre><code>2) 出现乱码
-    a) 解决方式一
-        i) 代码
-         @RequestMapping(value = &quot;/j1&quot;,produces = &quot;application/json;charset=utf-8&quot;)
-        ii) 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-03-59.png" alt>                        </p>
-<pre><code>b) 解决方式二
-    i) 代码：在springmvc-servlet.xml中配置
-     &lt;!--springmvc json乱码解决配置--&gt;
-        &lt;mvc:annotation-driven&gt;
-            &lt;mvc:message-converters&gt;
-                &lt;bean class=&quot;org.springframework.http.converter.StringHttpMessageConverter&quot;&gt;
-                    &lt;constructor-arg value=&quot;utf-8&quot;/&gt;
-                &lt;/bean&gt;
-                &lt;bean class=&quot;org.springframework.http.converter.json.MappingJackson2HttpMessageConverter&quot;&gt;
-                    &lt;property name=&quot;objectMapper&quot;&gt;
-                        &lt;bean class=&quot;org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean&quot;&gt;
-                            &lt;property name=&quot;failOnEmptyBeans&quot; value=&quot;false&quot;/&gt;
-                        &lt;/bean&gt;
+                    &lt;!--第三种：数组注入 ref--&gt;
+                    &lt;property name=&quot;books&quot;&gt;
+                        &lt;array&gt;
+                            &lt;value&gt;周易&lt;/value&gt;
+                            &lt;value&gt;老子&lt;/value&gt;
+                            &lt;value&gt;六祖坛经&lt;/value&gt;
+                        &lt;/array&gt;
                     &lt;/property&gt;
-                &lt;/bean&gt;
-            &lt;/mvc:message-converters&gt;
-        &lt;/mvc:annotation-driven&gt;
 
-    ii) 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-35.png" alt></p>
-<pre><code>3) 关于注解及优化</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-47.png" alt><br><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-04-55.png" alt><br><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-05-02.png" alt><br>        c. 相关测试<br>            i. 以json格式展示数组<br>                1) 代码<br>                 @RequestMapping(“/j2”)<br>                    public String json2() throws JsonProcessingException {<br>                        //jackson  objectMapper，创建一个jackson对象<br>                        ObjectMapper mapper = new ObjectMapper();</p>
-<pre><code>        List&lt;User&gt; users = new ArrayList&lt;User&gt;();
+                    &lt;!--第四种：List注入--&gt;
+                    &lt;property name=&quot;hobbys&quot;&gt;
+                        &lt;list&gt;
+                            &lt;value&gt;撒尿&lt;/value&gt;
+                            &lt;value&gt;挖土&lt;/value&gt;
+                            &lt;value&gt;和泥巴&lt;/value&gt;
+                        &lt;/list&gt;
+                    &lt;/property&gt;
 
-        //创建多个对象
-        User user1 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-        User user2 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-        User user3 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-        User user4 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
+                    &lt;!--第五种：Map注入--&gt;
+                    &lt;property name=&quot;card&quot;&gt;
+                        &lt;map&gt;
+                            &lt;entry key=&quot;身份证&quot; value=&quot;123456789&quot;/&gt;
+                            &lt;entry key=&quot;银行卡&quot; value=&quot;987654321&quot;/&gt;
+                        &lt;/map&gt;
+                    &lt;/property&gt;
 
-        users.add(user1);
-        users.add(user2);
-        users.add(user3);
-        users.add(user4);
+                    &lt;!--第六种：Set注入--&gt;
+                    &lt;property name=&quot;games&quot;&gt;
+                        &lt;set&gt;
+                            &lt;value&gt;aaa&lt;/value&gt;
+                            &lt;value&gt;bbb&lt;/value&gt;
+                            &lt;value&gt;ccc&lt;/value&gt;
+                        &lt;/set&gt;
+                    &lt;/property&gt;
 
-        //将一个对象转换成字符串
-        String s = mapper.writeValueAsString(users);
-        return s;
-    }
+                    &lt;!--第七种：null注入--&gt;
+                    &lt;property name=&quot;wife&quot;&gt;
+                        &lt;null/&gt;
+                    &lt;/property&gt;
 
-2) 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-05-51.png" alt></p>
-<pre><code>ii. 以json格式展示时间
-    1) 代码
-     @RequestMapping(&quot;/j3&quot;)
-        public String json3() throws JsonProcessingException {
-            Date date = new Date();
-            return new ObjectMapper().writeValueAsString(date);
-        }
+                    &lt;!--第八种：properties注入--&gt;
+                    &lt;property name=&quot;info&quot;&gt;
+                        &lt;props&gt;
+                            &lt;prop key=&quot;id&quot;&gt;001&lt;/prop&gt;
+                            &lt;prop key=&quot;name&quot;&gt;helloWorld&lt;/prop&gt;
+                            &lt;prop key=&quot;password&quot;&gt;abc&lt;/prop&gt;
+                            &lt;prop key=&quot;age&quot;&gt;one&lt;/prop&gt;
+                        &lt;/props&gt;
+                    &lt;/property&gt;
 
-    2) 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-01.png" alt></p>
-<pre><code>3) 结果转换
-    a) 自定义（Java）
-        i) 代码
-         @RequestMapping(&quot;/j3&quot;)
-            public String json3() throws JsonProcessingException {
-                //自定义日期格式
-                SimpleDateFormat format = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);
-                return new ObjectMapper().writeValueAsString(format.format(new Date()));
-            }
-
-        ii) 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-30.png" alt>                        </p>
-<pre><code>b) 使用ObjectMapper方法
-    i) 代码
-     @RequestMapping(&quot;/j4&quot;)
-        public String json4() throws JsonProcessingException {
-            ObjectMapper mapper = new ObjectMapper();
-            //不使用时间戳的方式
-            mapper.configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS ,false);
-            mapper.setDateFormat(new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;));
-            return mapper.writeValueAsString(new Date());
-        }
-
-    ii) 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-41.png" alt></p>
-<pre><code>c) json工具类
-    i) 代码
-        One. 工具类
-        public class JsonUtils {
-            public static String getJson(Object o,String s){
-                ObjectMapper mapper = new ObjectMapper();
-                //不使用时间戳
-                mapper.configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS ,false);
-                //自定义日期格式
-                SimpleDateFormat dateFormat = new SimpleDateFormat(s);
-                mapper.setDateFormat(dateFormat);
-
-                try {
-                    return mapper.writeValueAsString(o);
-                } catch (JsonProcessingException e) {
-                    e.printStackTrace();
+            &lt;/bean&gt;
+        &lt;/beans&gt;
+        iv. 测试
+            1) 代码
+            public class MyTest {
+                public static void main(String[] args) {
+                    ApplicationContext context = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);
+                    Student student = (Student) context.getBean(&quot;student&quot;);
+                    //System.out.println(student.getName());
+                    System.out.println(student.toString());
                 }
-                return null;
             }
-        }
-
-        Two. 测试
-         @RequestMapping(&quot;/j5&quot;)
-            public String json5() throws JsonProcessingException {
-               return JsonUtils.getJson(new Date(),&quot;yyyy-MM-dd HH:mm:ss&quot;);
-            }
-
-    ii) 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-06-57.png" alt></p>
-<pre><code>d) 对工具类的优化（重载）
-    i) 代码
-    public class JsonUtils {
-        public static String getJson(Object o){
-            return getJson(o,&quot;yyyy-MM-dd HH:mm:ss&quot;);
-        }
-
-        public static String getJson(Object o,String s){
-            ObjectMapper mapper = new ObjectMapper();
-            //不使用时间戳
-            mapper.configure(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS ,false);
-            //自定义日期格式
-            SimpleDateFormat dateFormat = new SimpleDateFormat(s);
-            mapper.setDateFormat(dateFormat);
-
-            try {
-                return mapper.writeValueAsString(o);
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-    }
-
-    ii) 调用时只需传递一个对象即可</code></pre><h2 id="fastjson-阿里之一光"><a href="#fastjson-阿里之一光" class="headerlink" title="fastjson-阿里之一光"></a>fastjson-阿里之一光</h2><pre><code>1. 简介fastjson
-    a. 阿里开发用于Java开发
-    b. 方便的实现json对象与JavaBean对象的转换
-    c. javaBean对象与json字符串转换
-    d. json对象与json字符串转换
-2. 例证
-    a. 导入依赖
-    &lt;!-- https://mvnrepository.com/artifact/com.alibaba/fastjson --&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
-        &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
-        &lt;version&gt;1.2.68&lt;/version&gt;
-    &lt;/dependency&gt;
-    b. 代码
-        i. Controller
+            2) 结果
             /**
-             * fastjson
-             */
-            @RequestMapping(&quot;/j7&quot;)
-            public String json7() throws JsonProcessingException {
-                List&lt;User&gt; users = new ArrayList&lt;User&gt;();
-                User user1 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                User user2 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                User user3 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                User user4 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                users.add(user1);
-                users.add(user2);
-                users.add(user3);
-                users.add(user4);
+                * Student{
+                *          name=&apos;天籁&apos;,
+                *          address=Address{address=&apos;塔里木&apos;},
+                *          books=[周易, 老子, 六祖坛经],
+                *          hobbys=[撒尿, 挖土, 和泥巴],
+                *          card={身份证=123456789, 银行卡=987654321},
+                *          games=[aaa, bbb, ccc],
+                *          wife=&apos;null&apos;,
+                *          info={age=one, password=abc, name=helloWorld, id=001}
+                *        }
+                */
 
-                String s = JSON.toJSONString(users);
-                return s;
-            }
-
-        ii. 测试结果
-
-    c. fastjson的一些用法
-        i. 代码
-         @RequestMapping(&quot;/j7&quot;)
-            public String json7() throws JsonProcessingException {
-                List&lt;User&gt; users = new ArrayList&lt;User&gt;();
-                User user1 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                User user2 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                User user3 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                User user4 = new User(&quot;屠龙&quot;, 18, &quot;男&quot;);
-                users.add(user1);
-                users.add(user2);
-                users.add(user3);
-                users.add(user4);
-
-                System.out.println(&quot;*** java对象 转 json字符串 ***&quot;);
-                String s1 = JSON.toJSONString(users);
-                System.out.println(&quot;JSON.toJSONString(users)==&gt;&quot; + s1);
-                String s2 = JSON.toJSONString(user1);
-                System.out.println(&quot;JSON.toJSONString(user1)==&gt;&quot; + s2);
-
-                System.out.println(&quot;*** json字符串 转 java对象 ***&quot;);
-                User user = JSON.parseObject(s2, User.class);
-                System.out.println(&quot;JSON.parseObject(s2, User.class)==&gt;&quot; + user);
-
-                System.out.println(&quot;*** java对象 转 json对象 ***&quot;);
-                JSONObject o = (JSONObject)JSON.toJSON(user2);
-                System.out.println(&quot;(JSONObject)JSON.toJSON(user2)==&gt;&quot; + o.getString(&quot;name&quot;));
-
-                System.out.println(&quot;*** json对象 转 java对象 ***&quot;);
-                User to_java_user = JSON.toJavaObject(o, user.getClass());
-                System.out.println(&quot;JSON.toJavaObject(o, user.getClass())==&gt;&quot; + to_java_user);
-
-                return &quot;Hello&quot;;
-            }
-
-        ii. 结果</code></pre><p><img src="/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/2020-05-17-00-08-59.png" alt>                </p>
+三：其他方式注入
+p/c命名空间注入</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-23-55.png" alt></p>
+<pre><code>a. p命名空间注入
+    i. 官网</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-06.png" alt></p>
+<pre><code>ii. 实体类
+    1) 属性随意（getterandsetter，toString）
+iii. beans.xml
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns:p=&quot;http://www.springframework.org/schema/p
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+    &lt;!--p命名空间注入，可以直接注入属性的值：property--&gt;
+    &lt;bean id=&quot;user&quot; class=&quot;xx.xx.pojo.User&quot; p:name=&quot;人屠&quot; p:age=&quot;3&quot;/&gt;
+&lt;/beans&gt;
+iv. 测试
+    1) 代码
+    /*p命名*/
+        @Test
+        public void test2(){
+            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;userbeans.xml&quot;);
+            User user = context.getBean(&quot;user&quot;,User.class);
+            System.out.println(user);
+        }
+    2) 结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-42.png" alt></p>
+<pre><code>b. c命名空间注入
+    i. 官网</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-24-51.png" alt></p>
+<pre><code>ii. 实体类
+    1) 在原有基础上添加有无参构造器
+iii. beans.xml
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns:c=&quot;http://www.springframework.org/schema/c&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+&lt;!--c命名空间注入，通过构造器注入：construct-agrs--&gt;
+    &lt;bean id=&quot;user2&quot; class=&quot;xx.xx.pojo.User&quot; c:name=&quot;诡诈&quot; c:age=&quot;3&quot;/&gt;
+&lt;/beans&gt;
+iv. 测试
+    1) 代码
+    /*c命名*/
+        @Test
+        public void test3(){
+            ApplicationContext context = new ClassPathXmlApplicationContext(&quot;userbeans.xml&quot;);
+            User user = context.getBean(&quot;user2&quot;,User.class);
+            System.out.println(user);
+        }
+    2) 结果</code></pre><p><img src="/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/2020-05-16-22-25-16.png" alt>                </p>
 
       
 
@@ -540,7 +471,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java-springMVC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java-Spring</a>
         		</li>
       		
 		</ul>
@@ -596,7 +527,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/17/%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%A0%BC%E5%BC%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/16/Spring%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%E5%92%8CDI%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -610,18 +541,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/17/%E5%BC%82%E6%AD%A5%E4%BC%A0%E8%BE%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/16/%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8DBean%E5%8F%8A%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          异步传输相关操作
+          自动装配Bean及注解开发
         
       </div>
     </a>
   
   
-    <a href="/2020/05/17/%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%BD%AC%E5%8F%91%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">重定向和转发的相关操作</div>
+    <a href="/2020/04/30/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">相约春天</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -648,7 +579,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#神奇的数据交换中间人-JSON"><span class="toc-number">1.</span> <span class="toc-text">神奇的数据交换中间人-JSON</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#json"><span class="toc-number">1.1.</span> <span class="toc-text">json</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fastjson-阿里之一光"><span class="toc-number">1.2.</span> <span class="toc-text">fastjson-阿里之一光</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一切为了简化和解耦"><span class="toc-number">1.</span> <span class="toc-text">一切为了简化和解耦</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring配置"><span class="toc-number">1.1.</span> <span class="toc-text">Spring配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#依赖注入"><span class="toc-number">1.2.</span> <span class="toc-text">依赖注入</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -774,15 +705,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java-Spring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java-springMVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java-Spring</a>
               </li>
             
             <div class="clearfix"></div>
@@ -834,27 +765,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="https://www.codesheep.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://www.codesheep.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>codesheep</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>liaoxuefeng</a>
             </li>
           
             <li class="search-li">
-              <a href="https://blog.csdn.net/wangshuaiwsws95" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://blog.csdn.net/wangshuaiwsws95" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>wangshuaiwsws95</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.2345daohang.com/dianji/63426/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://www.2345daohang.com/dianji/63426/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>2345daohang</a>
             </li>
           
             <li class="search-li">
-              <a href="http://www.aisixiang.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="http://www.aisixiang.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>aisixiang</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.bilibili.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://www.bilibili.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>bilibili</a>
             </li>
           
         </ul>

@@ -6,45 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Mybatis配置解析及属性优化 | territorialterritory</title>
+  <title>核心控制器和RestFul分格 | territorialterritory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Mybatis—深入交流">
+  <meta name="description" content="掌握核心科技">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mybatis配置解析及属性优化">
-<meta property="og:url" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:title" content="核心控制器和RestFul分格">
+<meta property="og:url" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/index.html">
 <meta property="og:site_name" content="territorialterritory">
-<meta property="og:description" content="Mybatis—深入交流">
+<meta property="og:description" content="掌握核心科技">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-11-54.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-19-30.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-29-32.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-31-01.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-31-10.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-31-17.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-36-44.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-40-27.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-41-37.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-42-20.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-45-58.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-46-53.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-49-24.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-53-09.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-55-06.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-55-42.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-55-53.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-57-12.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-03-11.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-05-53.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-09-54.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-11-21.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-11-52.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-14-57.png">
-<meta property="article:published_time" content="2020-04-18T17:48:09.000Z">
-<meta property="article:modified_time" content="2020-04-19T14:51:39.499Z">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-34-12.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-35-08.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-35-22.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-35-39.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-36-20.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-36-58.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-37-35.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-39-51.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-40-08.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-40-20.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-40-30.png">
+<meta property="og:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-40-40.png">
+<meta property="article:published_time" content="2020-05-16T15:10:54.000Z">
+<meta property="article:modified_time" content="2020-05-16T15:41:05.550Z">
 <meta property="article:author" content="雍朔">
-<meta property="article:tag" content="Java-Mybatis">
+<meta property="article:tag" content="java-springMVC">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-11-54.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-34-12.png">
   
     <link rel="alternative" href="/atom.xml" title="territorialterritory" type="application/atom+xml">
   
@@ -178,432 +166,206 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mybatis配置解析及属性优化" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-核心控制器和RestFul分格" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Mybatis配置解析及属性优化
+      核心控制器和RestFul分格
     </h1>
   
 
         
-        <a href="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2020-04-18T17:48:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-18</time>
+        <a href="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/" class="archive-article-date">
+  	<time datetime="2020-05-16T15:10:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Mybatis—深入交流"><a href="#Mybatis—深入交流" class="headerlink" title="Mybatis—深入交流"></a>Mybatis—深入交流</h1><a id="more"></a>
+        <h1 id="掌握核心科技"><a href="#掌握核心科技" class="headerlink" title="掌握核心科技"></a>掌握核心科技</h1><a id="more"></a>
 
-<h2 id="第一点-传参"><a href="#第一点-传参" class="headerlink" title="第一点 传参"></a>第一点 传参</h2><p>一：当你在传参时是否也会遇到这样的问题</p>
-<pre><code>1.当需要传递的参数只有一个时你会感到非常容易比如
-接口中：
-User getUserById(int id);
-xml中：
-select * from user where id = #{id}
-测试中：
-User user = mapper.getUserById(1);
-2.然而当是实体类，数据库中表，字段或者参数过多时，只能老老实实按部就班 的去做
-（或：把构造写成可变参数）
-接口中：
-int addUser(User user);
-xml中：
-需要保持字段名和参数名一致
-insert into user (id,name ,pwd)values (#{id},#{name},#{pwd});
-测试中:
-int res = mapper.addUser(new User(*,&quot;**&quot;,&quot;**&quot;));
-这里需要注意的是    增 删 改 需要事务提交：sqlSession.commit();
-3.这时就需要比较灵活的野路子map来传递参数（注意：这里只是提供一个更快捷,方便的测试方式而已，不是教条主义）
-接口中：
-int addUser(Map&lt;String,Object&gt; map);
-xml中：
-insertintouser(id,name,pwd)values(#{userId},#{userName},#{userPassWord})；
-测试中:
-测试中利用map来传递不同键值对参数，达到属性名和数据库中的字段名不同，但能传参成功
-因为key可以随意定值，所以可以通过key名称直接获取
-Map&lt;String,Object&gt;map=newHashMap&lt;String,Object&gt;();
-map.put(&quot;userId&quot;,1);
-map.put(&quot;userName&quot;,&quot;**&quot;);
-map.put(&quot;userPassWord&quot;,&quot;**&quot;);
-mapper.addUser(map);
-sqlSession.commit();
-sqlSession.close();</code></pre><p>二：总结</p>
-<pre><code>Map传递参数时，直接在sql中取出key即可。parameterType=&quot;map&quot;
-对象传递参数时，直接在sql中取参数的属性即可。parameterType=&quot;Object&quot;只有一个基本类型参数时，直接在sql中取即可。（此时可以不写）
-所以：多个参数时用Map（或者注解）
-传递参数时可能遇到的sql注入问题以模糊查询为例
-方法一在Java代码中执行
-    接口中：
-    List&lt;User&gt; getUserLike(String value);
-    xml中：
-    select * from user where name = #{value};
-    测试中:
-    List&lt;User&gt; userList = mapper.getUserLike(&quot;%天%&quot;);
-方法二：在sql中拼接使用通配符执行
-    接口中：
-    List&lt;User&gt; getUserLike(String value);
-    xml中：
-    select * from user where name like “%“#{value}“%”;
-    测试中:
-    List&lt;User&gt; userList = mapper.getUserLike(&quot;天&quot;);
+<h2 id="控制器Controller"><a href="#控制器Controller" class="headerlink" title="控制器Controller"></a>控制器Controller</h2><pre><code>1. 对控制器的简单界定
+    a. 控制器通常通过接口定义或注解定义实现复杂提供访问应用程序的行为
+    b. 控制器负责解析用户的请求并将其转换为一个模型
+    c. 在Springmvc中一个控制器类可以包含多个方法
+    d. 在Springmvc中，对于controller的配置方法有很多种
+2. 在SpringMVC 中，控制器Controller 负责处理由DispatcherServlet 分发的请求，它把用户请求的数据经过业务处理层处理之后封装成一个Model ，然后再把该Model 返回给对应的View 进行展示。在SpringMVC 中提供了一个非常简便的定义Controller 的方法，你无需继承特定的类或实现特定的接口，只需使用@Controller 标记一个类是Controller ，然后使用@RequestMapping 和@RequestParam 等一些注解用以定义URL 请求和Controller 方法之间的映射，这样的Controller 就能被外界访问到。此外Controller 不会直接依赖于HttpServletRequest 和HttpServletResponse 等HttpServlet 对象，它们可以通过Controller 的方法参数灵活的获取到。
+3. 例证
+    a. 实现Controller接口
+        i. 官方</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-34-12.png" alt></p>
+<pre><code>ii. 例证
+    1) 新建一个Moudle
+    2) Web.xml
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+                 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                 xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;version=&quot;4.0&quot;&gt;
+            &lt;servlet&gt;
+                &lt;servlet-name&gt;springmvc&lt;/servlet-name&gt;
+                &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+                &lt;init-param&gt;
+                    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+                    &lt;param-value&gt;classpath:springmvc-servlet.xml&lt;/param-value&gt;
+                &lt;/init-param&gt;
+                &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+            &lt;/servlet&gt;
+            &lt;servlet-mapping&gt;
+                &lt;servlet-name&gt;springmvc&lt;/servlet-name&gt;
+                &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+            &lt;/servlet-mapping&gt;
+        &lt;/web-app&gt;
 
-    注意鉴于第二种方法在sql中执行，这种方式使用通配符有可能产生sql注入,所以将参数写死，避免sql注入
-    select * from user where name where id = ?;
-    select * from user where name where id = 1 or 1=1;(将查出所有用户信息)</code></pre><h2 id="第二点-配置解析及属性优化"><a href="#第二点-配置解析及属性优化" class="headerlink" title="第二点 配置解析及属性优化"></a>第二点 配置解析及属性优化</h2><h3 id="Mybatis-config-xml中的是是非非"><a href="#Mybatis-config-xml中的是是非非" class="headerlink" title="Mybatis-config.xml中的是是非非"></a>Mybatis-config.xml中的是是非非</h3><p>MyBatis 的配置文件包含了会深深影响 MyBatis 行为的设置和属性信息。<br><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-11-54.png" alt></p>
-<h4 id="一：环境配置（environments）"><a href="#一：环境配置（environments）" class="headerlink" title="一：环境配置（environments）"></a>一：环境配置（environments）</h4><pre><code>MyBatis 可以配置成适应多种环境</code></pre><p>注意：尽管可以配置多个环境，但每个 SqlSessionFactory 实例只能选择一种环境。</p>
-<pre><code>&lt;environments default=&quot;development&quot;&gt;
-&lt;environment id=&quot;development&quot;&gt;
-    &lt;transactionManager type=&quot;JDBC&quot;&gt;        事务管理器（transactionManager）     数据源（dataSource）---c3p0  druid  dbcp
-    &lt;property name=&quot;...&quot; value=&quot;...&quot;/&gt;
-    &lt;/transactionManager&gt;
-    &lt;dataSource type=&quot;POOLED&quot;&gt;             连接池：POOLED– 能使并发 Web 应用快速响应请求。
-    &lt;property name=&quot;driver&quot; value=&quot;${driver}&quot;/&gt;
-    &lt;property name=&quot;url&quot; value=&quot;${url}&quot;/&gt;
-    &lt;property name=&quot;username&quot; value=&quot;${username}&quot;/&gt;
-    &lt;property name=&quot;password&quot; value=&quot;${password}&quot;/&gt;
-    &lt;/dataSource&gt;
-&lt;/environment&gt;
-&lt;/environments&gt;</code></pre><h4 id="二：属性（properties）"><a href="#二：属性（properties）" class="headerlink" title="二：属性（properties）"></a>二：属性（properties）</h4><p>我们可以通过properties属性实现引用配置文件（属性可以在外部进行配置，并可以进行动态替换。）</p>
-<pre><code>1.编写配置文件（db.properties）</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-19-30.png" alt></p>
-<pre><code>2.在properties中引入
-&lt;properties resource=&quot;db.properties&quot;/&gt;
-    a. 可以直接引入外部配置文件
-        &lt;properties resource=&quot;db.properties&quot;/&gt;
-    b. 可以在其中添加一些属性配置
-        &lt;!--引入外部配置文件 注意：如果两个文件有同一字段，优先执行外部配置文件properties--&gt;
-        &lt;!--
-        &lt;property name=&quot;username&quot; value=&quot;&quot;/&gt;
-        &lt;property name=&quot;password&quot; value=&quot;&quot;/&gt;
-        --&gt;</code></pre><h4 id="三：类型别名（typeAliases）"><a href="#三：类型别名（typeAliases）" class="headerlink" title="三：类型别名（typeAliases）"></a>三：类型别名（typeAliases）</h4><p>类型别名可为 Java 类型设置一个缩写名字。 它仅用于 XML 配置，意在降低冗余的全限定类名书写。</p>
-<pre><code>1.&lt;!--可以给实体类起别名--&gt;
-&lt;typeAliases&gt; 
-    第一种：
-        &lt;!--&lt;typeAlias type=&quot;xx.xx.pojo.User&quot; alias=&quot;User&quot;&gt;&lt;/typeAlias&gt;--&gt;
-    第二种：
-        &lt;package name=&quot;xx.xx.pojo&quot;/&gt;
-&lt;/typeAliases&gt;
-    第三种在pojo.User中添加注解：
-        @Alias(&quot;hello&quot;)---&gt;resultType=&quot;hello&quot;
+    3) Springmvc-servlet.xml
+        &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+               xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+               xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+               xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+               xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                        https://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        https://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/mvc
+                        https://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;&gt;
 
-2.再写结果类型时将较方便（大小写都可以，官方建议小写）
-    resultType=&quot;user&quot; 
-当然也可以写全限定类名，根据个人喜好而定
-    resultType=&quot;xx.xx.pojo.User&quot;
+            &lt;!--视图解析器--&gt;
+            &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot; id=&quot;internalResourceViewResolver&quot;&gt;
+                &lt;!--前缀--&gt;
+                &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/jsp/&quot;/&gt;
+                &lt;!--后缀--&gt;
+                &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;/&gt;
+            &lt;/bean&gt;
 
-3.扩：
-    a. 在实体类较少的时候，使用第一种
-    b. 实体类较多时，使用第二种
-    c. 第一种可以DIY别名，第二种不行（除非在实体类上添加注解）
-    d. 一些为常见的 Java 类型内建的类型别名。它们都是不区分大小写的，注意，为了应对原始类型的命名重复，采取了特殊的命名风格。
+            &lt;!--注册bean--&gt;
+            &lt;bean name=&quot;test1&quot; class=&quot;xx.xx.controller.ControllerTest1&quot;/&gt;
+        &lt;/beans&gt;
 
-        别名                映射的类型
-        _byte                byte
-        _long                long
-        _short                short
-        _int                int
-        _integer            int
-        _double                double
-        _float                float
-        _boolean            boolean
-        string                String
-        byte                Byte
-        long                Long
-        short                Short
-        int                    Integer
-        integer                Integer
-        double                Double
-        float                Float
-        boolean                Boolean
-        date                Date
-        decimal                BigDecimal
-        bigdecimal            BigDecimal
-        object                Object
-        map                    Map
-        hashmap                HashMap
-        list                List
-        arraylist            ArrayList
-        collection            Collection
-        iterator            Iterator</code></pre><h4 id="四：设置（settings）"><a href="#四：设置（settings）" class="headerlink" title="四：设置（settings）"></a>四：设置（settings）</h4><p>1.关于设置在官网上看起来好多<br><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-29-32.png" alt><br>2.但主要用的是这些<br><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-31-01.png" alt><br><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-31-10.png" alt><br><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-31-17.png" alt></p>
-<h4 id="五：其他配置"><a href="#五：其他配置" class="headerlink" title="五：其他配置"></a>五：其他配置</h4><p>这些配置学习了解即可</p>
-<pre><code>1.typeHandlers（类型处理器）
-2.objectFactory（对象工厂）
-3.plugins（插件）
-    a. Mybatis-generator-core
-    b. Mbatis-plus
-    c. 通用mapper</code></pre><h4 id="六：映射器（mappers）"><a href="#六：映射器（mappers）" class="headerlink" title="六：映射器（mappers）"></a>六：映射器（mappers）</h4><pre><code>&lt;!--每一个Mapper.xml都需要在mybatis核心配置文件中注册--&gt;</code></pre><p>定义 SQL 映射语句—&gt;直接告诉 MyBatis 到哪里去找映射文件—&gt;类路径的资源引用，或完全限定资源定位符，或类名和包名。</p>
-<pre><code>方式一：
-    &lt;!-- 使用相对于类路径的资源引用 --&gt;
-    &lt;mappers&gt;
-        &lt;mapper resource=&quot;org/mybatis/builder/AuthorMapper.xml&quot;/&gt;
-    &lt;/mappers&gt;
+    4) Controller实现类
+        public class ControllerTest1 implements Controller {
+            public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+                ModelAndView mv = new ModelAndView();
+                mv.addObject(&quot;msg&quot;,&quot;ControllerTest1&quot;);
+                mv.setViewName(&quot;test&quot;);
 
-方式二：
-    &lt;!-- 使用映射器接口实现类的完全限定类名 --&gt;
-    &lt;mappers&gt;
-    &lt;mapper class=&quot;org.mybatis.builder.AuthorMapper&quot;/&gt;
-    &lt;/mappers&gt;
-注意：
-    a. 接口和它的Mapper配置文件必须同名
-    b. 接口和它的Mapper配置文件必须在同一包下
-
-方式三：
-    &lt;!-- 将包内的映射器接口实现全部注册为映射器 --&gt;
-    &lt;mappers&gt;
-        &lt;package name=&quot;org.mybatis.builder&quot;/&gt;
-    &lt;/mappers&gt;</code></pre><h4 id="七：生命周期和作用域（Scope）"><a href="#七：生命周期和作用域（Scope）" class="headerlink" title="七：生命周期和作用域（Scope）"></a>七：生命周期和作用域（Scope）</h4><p>作用域和生命周期类别是至关重要的，因为错误的使用会导致非常严重的并发问题。</p>
-<p>以下为生命周期的代理模式示意图</p>
-<p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-36-44.png" alt></p>
-<p>解析：</p>
-<pre><code>1. SqlSessionFactoryBuilder
-    a. 一旦创建了 SqlSessionFactory，就不再需要它了。
-    b. 局部变量
-2. SqlSessionFactory
-    a. 可以近似为：数据库连接池
-    b. SqlSessionFactory 一旦被创建就应该在应用的运行期间一直存在，没有任何理由丢弃它或重新创建另一个实例。
-    c. 多次重建 SqlSessionFactory 被视为一种代码“坏习惯”---&gt;浪费内存，占用资源。
-3. SqlSession
-    a. 连接到连接池的一个请求
-    b. SqlSession 的实例不是线程安全的，因此是不能被共享的，所以它的最佳的作用域是请求或方法作用域。
-    c. 用完之后立即关闭，否则占用资源。</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-40-27.png" alt><br>这里的每一个Mapper，就代表一个具体的业务！</p>
-<h4 id="八：RequestMap（解决属性名和字段名不一致的问题）"><a href="#八：RequestMap（解决属性名和字段名不一致的问题）" class="headerlink" title="八：RequestMap（解决属性名和字段名不一致的问题）"></a>八：RequestMap（解决属性名和字段名不一致的问题）</h4><p>1.数据库字段</p>
-<p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-41-37.png" alt></p>
-<p>2.实体类属性</p>
-<p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-42-20.png" alt></p>
-<p>3.sql语句（根据id查询用户信息）</p>
-<pre><code>&lt;select id=&quot;getUserById&quot; resultType=&quot;UserMap&quot;&gt;
-    select * from user where id = #{id};
-&lt;/select&gt;</code></pre><p>4.测试</p>
-<pre><code>@Test
-public void getUserById(){
-    SqlSession sqlSession = MybatisUtils.getSqlSession();
-    UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-    User user = mapper.getUserById(1);
-    System.out.println(user);
-    sqlSession.close();
-}</code></pre><p>5.测试结果为</p>
-<pre><code>User{id=1, name=&apos;XX&apos;, password=&apos;null&apos;}
-可以看到 password 为空</code></pre><p>6.为什末会是这样的结果？</p>
-<pre><code>通过分析发现
-    因为：select * from user where id = #{id}
-    其实是：select id,name,pwd from user where id = #{id}
-然而，我们在实体类中定义的却是 password
-导致字段名和属性名不一致，查询时类处理器无法反射到数据库相应字段，结果就是 password=&apos;null&apos;</code></pre><p>7.那该如何解决呢？</p>
-<pre><code>a. 解决办法
-    i. 起别名
-        select id,name,pwd as password from user where id = #{id}
-    ii. resultMap 将数据库中的列（字段名）映射到实体类的键上（属性）
-b. 所以什末是resultMap？
-    i. resultMap 元素是 MyBatis 中最重要最强大的元素。
-        1) ResultMap 的设计思想是，对简单的语句做到零配置，对于复杂一点的语句，只需要描述语句之间的关系就行了。
-    ii. 结果集映射
-        将pwd---&gt;password</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-45-58.png" alt></p>
-<pre><code>当你熟悉后只需要写需要映射的字段</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-46-53.png" alt></p>
-<h4 id="九：日志"><a href="#九：日志" class="headerlink" title="九：日志"></a>九：日志</h4><p>如果一个数据库操作，出现了异常，需要排错日志将是非常好的助手</p>
-<pre><code>以前通过  sout  debug 排错
-现在   日志工厂
-
-1.日志工厂
-    Mybatis 内置的日志工厂提供日志功能
-    | SLF4J   springBoot
-    | LOG4J   拓展性高
-    | LOG4J2
-    | JDK_LOGGING   Java自带日志
-    | COMMONS_LOGGING    工具包
-    | STDOUT_LOGGING    标准控制台输出
-    | NO_LOGGING
-2. 日志实现
-    a.  STDOUT_LOGGING    标准控制台输出
-        i. 在核心配置文件中配置
-            &lt;settings&gt;
-                &lt;!--标准的日志工厂实现--&gt;
-                &lt;setting name=&quot;logImpl&quot; value=&quot;STDOUT_LOGGING&quot;/&gt;
-            &lt;/settings&gt;
-
-        ii. 得到结果</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-49-24.png" alt></p>
-<pre><code>b. LOG4J   拓展性高
-    1.在pom.xml中导入依赖
-        &lt;!-- https://mvnrepository.com/artifact/log4j/log4j --&gt;
-            &lt;dependency&gt;
-                &lt;groupId&gt;log4j&lt;/groupId&gt;
-                &lt;artifactId&gt;log4j&lt;/artifactId&gt;
-                &lt;version&gt;1.2.17&lt;/version&gt;
-            &lt;/dependency&gt;
-    2.编写  log4j.properties  配置文件(注明：白嫖自  狂神)
-
-        #将等级为DEBUG的日志信息输出到console和file这两个目的地，console和file的定义在下面的代码
-        log4j.rootLogger=DEBUG,console,file
-
-        #控制台输出的相关设置
-        log4j.appender.console = org.apache.log4j.ConsoleAppender
-        log4j.appender.console.Target = System.out
-        log4j.appender.console.Threshold=DEBUG
-        log4j.appender.console.layout = org.apache.log4j.PatternLayout
-        log4j.appender.console.layout.ConversionPattern=[%c]-%m%n
-
-        #文件输出的相关设置
-        log4j.appender.file = org.apache.log4j.RollingFileAppender
-        log4j.appender.file.File=./log/wf.log
-        log4j.appender.file.MaxFileSize=10mb
-        log4j.appender.file.Threshold=DEBUG
-        log4j.appender.file.layout=org.apache.log4j.PatternLayout
-        log4j.appender.file.layout.ConversionPattern=[%p][%d{yy-MM-dd}][%c]%m%n
-
-        #日志输出级别
-        log4j.logger.org.mybatis=DEBUG
-        log4j.logger.java.sql=DEBUG
-        log4j.logger.java.sql.Statement=DEBUG
-        log4j.logger.java.sql.ResultSet=DEBUG
-        log4j.logger.java.sql.PreparedStatement=DEBUG
-
-    3.在核心配置文件中配置
-        &lt;settings&gt;
-            &lt;!--log4j日志工厂实现,用于较大型的项目--&gt;
-            &lt;setting name=&quot;logImpl&quot; value=&quot;LOG4J&quot;/&gt;
-        &lt;/settings&gt;
-
-    4.使用并得到结果</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-53-09.png" alt><br>发现：相比与标准日志，多了前缀也更加详细</p>
-<pre><code>5.简单实用
-    a.在要使用log4j的类中导入包
-        import org.apache.log4j.Logger;
-    b.生成日志对象，参数为当前类的class
-        static Logger logger = Logger.getLogger(UserDaoTest.class);
-    c.编写测试代码
-        static Logger logger = Logger.getLogger(UserDaoTest.class);
-            @Test
-            public void testLog4j(){
-                logger.info(&quot;info进入了testLog4j&quot;);
-                logger.debug(&quot;debug进入了testLog4j&quot;);
-                logger.error(&quot;error进入了testLog4j&quot;);
+                return mv;
             }
-
-    d.因为设置了 log4j.appender.file.File=./log/wf.log 所以得到结果</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-55-06.png" alt></p>
-<pre><code>e.所以在日常中，我们可以--&gt;</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-55-42.png" alt><br><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-55-53.png" alt></p>
-<h4 id="十：分页（limit）"><a href="#十：分页（limit）" class="headerlink" title="十：分页（limit）"></a>十：分页（limit）</h4><p>为什么要分页—&gt;坚少数据的处理量</p>
-<pre><code>一：核心sql
-1. 使用 limit 分页
-    a. 语法：select  * from user limit startIndex,pageSize
-    b. 举例：SELECT * FROM `user` LIMIT 0,2;</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-22-57-12.png" alt></p>
-<pre><code>    c. 所以：
-        i.  startIndex：从下标为index开始
-        ii. pageSize：每页显示个数
-2. 使用Mybatis实现分页
-    a. 接口
-        i.  List&lt;User&gt; getUserByLimit(Map&lt;String,Integer&gt; map);
-    b. Mapper.xml sql语句
-        &lt;!--分页limit--&gt;
-         &lt;select id=&quot;getUserByLimit&quot; resultMap=&quot;UserMap&quot; parameterType=&quot;map&quot;&gt;
-            select  * from user limit #{startIndex},#{pageSize}
-         &lt;/select&gt;
-    c. 测试Test
-        @Test
-            public void getUserByLimit(){
-                SqlSession sqlSession = MybatisUtils.getSqlSession();
-                UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-                HashMap&lt;String, Integer&gt; map = new HashMap&lt;String, Integer&gt;();
-                map.put(&quot;startIndex&quot;,0);
-                map.put(&quot;pageSize&quot;,2);
-                List&lt;User&gt; userList = mapper.getUserByLimit(map);
-                for (User user : userList) {
-                    System.out.println(user);
-                }
-                sqlSession.close();
-            }
-
-二：RowBounds
-1. 接口
- List&lt;User&gt; getUserByRowBounds（);
-2. Mapper.xml sql语句
-    &lt;!--分页RowBounds-&gt;
-     &lt;select id=&quot;getUserByRowBounds&quot; resultMap=&quot;UserMap&quot;&gt;
-        select  * from user
-    &lt;/select&gt;
-3. 测试Test
-    @Test
-        public void getUserByRowBounds(){
-            SqlSession sqlSession = MybatisUtils.getSqlSession();
-            //RowBounds
-            RowBounds rowBounds = new RowBounds(offers:1,limit:2);
-            //通过Java代码层面实现分页
-            List&lt;User&gt; userList = sqlSession.selectList(s:&quot;xx.xx.dao.UserMapper.getUserByRowBounds&quot;,o:null,rouBounds)
-            for (User user : userList) {
-                System.out.println(user);
-            }
-            sqlSession.close();
         }
 
-三：分页插件</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-03-11.png" alt></p>
-<h4 id="十一：注解"><a href="#十一：注解" class="headerlink" title="十一：注解"></a>十一：注解</h4><p>面向接口编程：核心    解耦</p>
-<pre><code>1. 注解开发（使用注解时将不再需要接口相应的Mapper.xml）
-    a. 接口
-        @Select(&quot;select * from user&quot;)
-            List&lt;User&gt; getUsers();
-    b. 绑定接口
-        &lt;!--绑定接口--&gt;
-            &lt;mappers&gt;
-                &lt;mapper class=&quot;xx.xx.dao.UserMapper&quot;/&gt;
-            &lt;/mappers&gt;
-    c. 测试
-        @Test
-            public void getUsers(){
-                SqlSession sqlSession = MybatisUtils.getSqlSession();
-                //底层主要使用反射
-                UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-                List&lt;User&gt; list = mapper.getUsers();
-                for (User user : list) {
-                    System.out.println(user);
-                }
-                sqlSession.close();
+    5) 编写jsp
+        &lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        ${msg}
+        &lt;/body&gt;
+        &lt;/html&gt;
+    6) 测试
+        a) 结果</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-35-08.png" alt></p>
+<pre><code>b) 错误：在测试的过程中出现了一个错误</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-35-22.png" alt></p>
+<pre><code>找了半天，才发现是自己眼瞎了</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-35-39.png" alt>                    </p>
+<pre><code>            所以，不管做什么，一定要细心认真
+    iii. 小结
+        1) 实现Controller接口是一种比较老旧的方法
+        2) 缺点：一个控制器中只能有一个方法，所以多方法就只能多控制器，非常麻烦
+
+b. 注解实现@Controller
+    i. 简介
+        1) @Controller注解用于声明Spring类的实例是一个控制器
+        2) Spring可以使用扫描机制找到应用程序中所有基于注解的控制器类，为了保证Spring能找到控制器，需要在配置文件中声明组件扫描</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-36-20.png" alt></p>
+<pre><code>3)  @RequestMapping
+    a)  @RequestMapping注解用于映射url到控制器类或一个特定的处理程序方法。
+    b) 用于类上时，所有响应请求都以本地址为父路径。用于方法上，就是请求响应本路径。</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-36-58.png" alt></p>
+<pre><code>        此时访问路径为：localhost：8080/项目名/father/t2
+ii. 例证
+    1) web.xml同上
+    2) springmvc-servlet.xml
+    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+    &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+           xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+           xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+           xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+           xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
+                    https://www.springframework.org/schema/beans/spring-beans.xsd
+                    http://www.springframework.org/schema/context
+                    https://www.springframework.org/schema/context/spring-context.xsd
+                    http://www.springframework.org/schema/mvc
+                    https://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;&gt;
+        &lt;context:component-scan base-package=&quot;cn.wf.controller&quot;/&gt;
+        &lt;!--视图解析器--&gt;
+        &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot; id=&quot;internalResourceViewResolver&quot;&gt;
+            &lt;!--前缀--&gt;
+            &lt;property name=&quot;prefix&quot; value=&quot;WEB-INF/jsp/&quot;/&gt;
+            &lt;!--后缀--&gt;
+            &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;/&gt;
+        &lt;/bean&gt;
+
+     &lt;/beans&gt;
+
+    1) controller的实现类
+        @Controller  //代表这个类被spring接管
+        public class ControllerTest2 {
+            @RequestMapping(&quot;/t2&quot;) 
+            public String test(Model model){
+                model.addAttribute(&quot;msg&quot;,&quot;ControllerTest2&quot;);
+                return &quot;test&quot;;
             }
-    d. 当方法存在多个参数，所有参数前面加上@Param（参数）注解。取参数的时候以@Param为准</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-05-53.png" alt></p>
-<pre><code>        i. 
-            1）#{}是预编译处理，$ {}是字符串替换。
-
-            2）mybatis在处理#{}时，会将sql中的#{}替换为?号，调用PreparedStatement的set方法来赋值；mybatis在处理 $ { } 时，就是把 ${ } 替换成变量的值。
-
-            3）使用 #{} 可以有效的防止SQL注入，提高系统安全性。
-        ii. 
-
-            1）$ 符号一般用来当作占位符，常使用Linux脚本的同学应该对此有更深的体会吧。既然是占位符，当然就是被用来替换的。知道了这点就能很容易区分$和#，从而不容易记错了。
-
-            2）预编译的机制。预编译是提前对SQL语句进行预编译，而其后注入的参数将不会再进行SQL编译。我们知道，SQL注入是发生在编译的过程中，因为恶意注入了某些特殊字符，最后被编译成了恶意的执行操作。
-               而预编译机制则可以很好的防止SQL注入。在某些特殊场合下只能用${}，不能用#{}。例如：在使用排序时ORDER BY ${id}，如果使用#{id}，则会被解析成ORDER BY “id”,这显然是一种错误的写法。
-
-2. 注解的核心：反射</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-09-54.png" alt></p>
-<h4 id="十二：Lombok-懒人的福音"><a href="#十二：Lombok-懒人的福音" class="headerlink" title="十二：Lombok(懒人的福音)"></a>十二：Lombok(懒人的福音)</h4><pre><code>1. Lombok项目是一个Java库，它会自动插入编辑器和构建工具中，Lombok提供了一组有用的注释，用来消除Java类中的大量样板代码。
-   仅五个字符(@Data)就可以替换数百行代码从而产生干净，简洁且易于维护的Java类。
-2. 使用步骤
-    a. 在idea中安装Lombok插件</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-11-21.png" alt></p>
-<pre><code>b. 可以写的注解</code></pre><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-11-52.png" alt><br>一般只需要写 @Data(内含 setterandgetter 有无参 toString hashcode equals等)</p>
-<pre><code>    c. 导包
-        &lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;
-            &lt;dependency&gt;
-                &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-                &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-                &lt;version&gt;1.18.10&lt;/version&gt;
-            &lt;/dependency&gt;
-
-    d. 实体类
-        @Data
-        @AllArgsConstructor
-        @NoArgsConstructor
-        public class User {
-            private int id;
-            private String name;
-            private String password;
         }
+    2) 测试</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-37-35.png" alt></p>
+<pre><code>c. 小结
+    i. 到此时发现，这两个不同的响应请求都指向一个视图，但页面结果却不一样。由此得出：视图被复用，控制器和视图之间是弱耦合关系</code></pre><h2 id="RestFul分格"><a href="#RestFul分格" class="headerlink" title="RestFul分格"></a>RestFul分格</h2><pre><code>    1. RESTFUL是一种网络应用程序的设计风格和开发方式，是一个资源定位及资源操作的分格，基于HTTP，可以使用XML格式定义或JSON格式定义。
+2. 特点
+    a. 每一个URI代表1种资源；
+    b. 客户端使用GET、POST、PUT、DELETE4个表示操作方式的动词对服务端资源进行操作：
+        i. GET用来获取资源
+        ii. POST用来新建资源（也可以用于更新资源）
+        iii. PUT用来更新资源
+        iv. DELETE用来删除资源
+    c. 通过操作资源的表现形式来操作资源；
+    d. 资源的表现形式是XML或者HTML；
+    e. 客户端与服务端之间的交互在请求之间是无状态的，从客户端到服务端的每个请求都必须包含理解请求所必需的信息。
+3. 架构
+    a. RESTful架构是对MVC架构改进后所形成的一种架构，通过使用事先定义好的接口与不同的服务联系起来。在RESTful架构中，浏览器使用POST，DELETE，PUT和GET四种请求方式分别对指定的URL资源进行增删改查操作。因此，RESTful是通过URI实现对资源的管理及访问，具有扩展性强、结构清晰的特点。
+    b. RESTful架构将服务器分成前端服务器和后端服务器两部分，前端服务器为用户提供无模型的视图；后端服务器为前端服务器提供接口。浏览器向前端服务器请求视图，通过视图中包含的AJAX函数发起接口请求获取模型。
+    c. 项目开发引入RESTful架构，利于团队并行开发。在RESTful架构中，将多数HTTP请求转移到前端服务器上，降低服务器的负荷，使视图获取后端模型失败也能呈现。但RESTful架构却不适用于所有的项目，当项目比较小时无需使用RESTful架构，项目变得更加复杂。</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-39-51.png" alt></p>
+<pre><code>    d. 访问方式
+        i. 原来访问方式（及传参）：http://localhost:8080/add?a=1&amp;b=2
+        ii. restful风格(安全，不暴露属性,隐藏了程序的一些东西)：http://localhost:8080/add/a/b
+4. 例证
+    a. 编写一个新的Controller类
+        i. 代码
+            @Controller
+            public class RestFulController {
+                /**@RequestMapping(value = &quot;/add/{a}/{b}&quot;,method = RequestMethod.GET)*/
+                @GetMapping(&quot;/add/{a}/{b}&quot;)
+                public String test1(@PathVariable int a,@PathVariable String b, Model model){
+                    String res = a + b;
+                    model.addAttribute(&quot;msg&quot;,&quot;answer is&quot; + res);
+                    return &quot;test&quot;;
+                }
+            }
 
-    e. 测试跟以前的一样
-3. 总结
-    a. 简介代码，修改属性简易，提高效率
-    b. 缺点
-        i. 不支持多种参数构造器的重载
-        ii. 减低了源代码的可读性和完整性</code></pre><h4 id="拓展：Mybatis详细的执行流程"><a href="#拓展：Mybatis详细的执行流程" class="headerlink" title="拓展：Mybatis详细的执行流程"></a>拓展：Mybatis详细的执行流程</h4><p><img src="/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/2020-04-18-23-14-57.png" alt></p>
-
+        ii. 说明</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-40-08.png" alt></p>
+<pre><code>iii. 测试
+    1) 结果</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-40-20.png" alt></p>
+<pre><code>2) 错误</code></pre><p><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-40-30.png" alt><br><img src="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/2020-05-16-23-40-40.png" alt>                </p>
+<pre><code>5. 小结
+    a. 使用路径变量的好处
+        i. 时路径变得更加简洁
+        ii. 获得参数更加方便，框架会自动进行类型转换
+        iii. 通过路径变量的类型可以约束访问参数，如果类型不一致，将无法访问对应的请求方法。
+    b. 所有的地址栏请求默认为  HTTP GET 类型
+    c. 方法级别的注解的变体
+        i.  @GetMapping  （是一个组合注解）
+        ii.  @PostMapping
+        iii.  @PutMapping
+        iv.  @DeleteMapping
+        v.  @PatchMapping</code></pre>
       
 
       
@@ -647,7 +409,7 @@ b. 所以什末是resultMap？
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Java-Mybatis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java-springMVC</a>
         		</li>
       		
 		</ul>
@@ -703,7 +465,7 @@ b. 所以什末是resultMap？
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/19/Mybatis%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%B1%9E%E6%80%A7%E4%BC%98%E5%8C%96/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -717,18 +479,18 @@ b. 所以什末是resultMap？
   
 <nav id="article-nav">
   
-    <a href="/2020/04/20/Mybatis%E4%B9%8B%E5%A4%8D%E6%9D%82%E6%9F%A5%E8%AF%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/16/%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%BD%AC%E5%8F%91%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Mybatis之复杂查询
+          重定向和转发的相关操作
         
       </div>
     </a>
   
   
-    <a href="/2020/04/05/Mybatis%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%8F%8ACRUD/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Mybatis基础入门及CRUD</div>
+    <a href="/2020/05/16/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC/%E6%A0%B8%E5%BF%83%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8CRestFul%E5%88%86%E6%A0%BC%20-%20%E5%89%AF%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">核心控制器和RestFul分格</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -755,7 +517,7 @@ b. 所以什末是resultMap？
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mybatis—深入交流"><span class="toc-number">1.</span> <span class="toc-text">Mybatis—深入交流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一点-传参"><span class="toc-number">1.1.</span> <span class="toc-text">第一点 传参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二点-配置解析及属性优化"><span class="toc-number">1.2.</span> <span class="toc-text">第二点 配置解析及属性优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis-config-xml中的是是非非"><span class="toc-number">1.2.1.</span> <span class="toc-text">Mybatis-config.xml中的是是非非</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一：环境配置（environments）"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">一：环境配置（environments）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二：属性（properties）"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">二：属性（properties）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三：类型别名（typeAliases）"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">三：类型别名（typeAliases）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四：设置（settings）"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">四：设置（settings）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五：其他配置"><span class="toc-number">1.2.1.5.</span> <span class="toc-text">五：其他配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#六：映射器（mappers）"><span class="toc-number">1.2.1.6.</span> <span class="toc-text">六：映射器（mappers）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#七：生命周期和作用域（Scope）"><span class="toc-number">1.2.1.7.</span> <span class="toc-text">七：生命周期和作用域（Scope）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#八：RequestMap（解决属性名和字段名不一致的问题）"><span class="toc-number">1.2.1.8.</span> <span class="toc-text">八：RequestMap（解决属性名和字段名不一致的问题）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#九：日志"><span class="toc-number">1.2.1.9.</span> <span class="toc-text">九：日志</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十：分页（limit）"><span class="toc-number">1.2.1.10.</span> <span class="toc-text">十：分页（limit）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十一：注解"><span class="toc-number">1.2.1.11.</span> <span class="toc-text">十一：注解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#十二：Lombok-懒人的福音"><span class="toc-number">1.2.1.12.</span> <span class="toc-text">十二：Lombok(懒人的福音)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#拓展：Mybatis详细的执行流程"><span class="toc-number">1.2.1.13.</span> <span class="toc-text">拓展：Mybatis详细的执行流程</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#掌握核心科技"><span class="toc-number">1.</span> <span class="toc-text">掌握核心科技</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#控制器Controller"><span class="toc-number">1.1.</span> <span class="toc-text">控制器Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RestFul分格"><span class="toc-number">1.2.</span> <span class="toc-text">RestFul分格</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -881,15 +643,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java-Spring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java-springMVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java-Spring</a>
               </li>
             
             <div class="clearfix"></div>
@@ -941,27 +703,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="https://www.codesheep.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://www.codesheep.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>codesheep</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="https://www.liaoxuefeng.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>liaoxuefeng</a>
             </li>
           
             <li class="search-li">
-              <a href="https://blog.csdn.net/wangshuaiwsws95" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="https://blog.csdn.net/wangshuaiwsws95" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>wangshuaiwsws95</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.2345daohang.com/dianji/63426/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="https://www.2345daohang.com/dianji/63426/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>2345daohang</a>
             </li>
           
             <li class="search-li">
-              <a href="http://www.aisixiang.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="http://www.aisixiang.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>aisixiang</a>
             </li>
           
             <li class="search-li">
-              <a href="https://www.bilibili.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://www.bilibili.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>bilibili</a>
             </li>
           
         </ul>
