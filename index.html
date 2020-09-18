@@ -152,438 +152,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-javase方法概述" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/04/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/">javase方法概述</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/04/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2020-08-03T19:17:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-
-<h2 id="javaSE函数学习"><a href="#javaSE函数学习" class="headerlink" title="javaSE函数学习"></a>javaSE函数学习</h2><h3 id="方法的定义与调用"><a href="#方法的定义与调用" class="headerlink" title="方法的定义与调用"></a>方法的定义与调用</h3><pre><code>1. Java方法是语句的集合，组在一起执行一个功能。（封装一段特定功能的代码）
-    a. 方法是解决一类问题的步骤的有序集合
-    b. 方法包含于类或对象中
-    c. 方法在程序中创建，再其他地方被引用
-    d. 方法定义在类中
-    e. 方法中不能定义方法
-2. 设计原则（方法的本以是功能块，就是实现某个功能的语句块的集合）
-    a. 原子性：一个方法只完成一个功能（利于后期扩张）
-3. 命名规则：驼峰
-4. 格式
-    a. 访问权限修饰符 修饰符   返回值类型   方法名（形参类型  参数名）{
-                、、、
-                 方法体
-                、、、
-                return  返回值；}
-        i. 访问权限修饰符：public
-        ii. 修饰符：static
-
-    b. 修饰符：
-    c. 返回值类型：返回值的数据类型，当没有返回值的时候为void
-    d. 方法名：标识符（小驼峰）
-    e. 形参类型：当方法无法自己子自给时，需要外部传入定义的变量
-    f. 方法体： 
-    g. 方法的使用
-    h. 注：实参列表要与形参列表数据类型一致、长度一致、顺序一致。
-5. 优点：
-    a. 减少代码冗余
-    b. 提高复用性
-    c. 提高可读性
-    d. 提高可维护性
-    e. 方便分工合作
-    f. 降低代码的 耦合度     
-6. return的两种用法：
-    a. 返回数据，只能有一个
-    b. 结束方法
-        i. 对比 
-            1) continue：跳过本次循环
-            2) break：跳出循环
-            3) return：结束方法     </code></pre><h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><pre><code>同一个类中，修饰符一致，返回值一致，方法名相同（形参列表不同）
-
-可以在同一类中实现更多的功能，且不违背一个方法实现一个功能的基本原则。</code></pre><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><pre><code>1. 递归可以解决具有既定规律的特定问题
-2. 何时使用
-    a. 当需要解决的问题可以分成若个小问题，大小问题的解决方法一致相同
-    b. 有固定规律，函数中自己调用自己。
-3. 如何正确使用递归
-    a. 设置有效的出口条件，避免无穷递归。
-4. 递归阶乘</code></pre><p><img src="/2020/08/04/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-29-43.png" alt></p>
-<pre><code>a. 递进：每一次推进，计算都比上一次简单，直至简单到无需推进，就能获得结果。（也叫：到达出口）。
-b. 回归：基于出口的结果，逐层向上回归，依次计算每一层的结果，直至回归到最顶层。
-c. 注：1的阶乘为1.
-d. 例证
-    i. 提出问题</code></pre><p><img src="/2020/08/04/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-30-38.png" alt></p>
-<pre><code>ii. 尝试解决问题</code></pre><p><img src="/2020/08/04/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-31-33.png" alt></p>
-<pre><code>iii. 解决问题</code></pre><p><img src="/2020/08/04/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/2020-08-03-19-31-46.png" alt>            </p>
-<pre><code>e. 注：所有能以递归解决的问题，循环都能解决。当解决复杂问题的时候，递归的实现方式更为简单。
-f. 四大法则
-    1. 基准情形： 必须有某些基准情形，它无需递归即可解出。
-
-    2. 不断推进： 对于需要递归求解的情形，每次递归调用都必须使得求解状况朝着基准情形推进。
-
-    3. 设计法则： 假设所有的递归调用都能运行。
-
-    4. 合成效益法则：在求解一个问题的同一实例时，切勿在不同的递归调用中做重复性工作。 
-
-g. 函数的总结：
-
-h. 拓展：
-    i. 斐波那契数列 又称为“兔子数列”，指的是这样一个数列：1、1、2、3、5、8、13、21、34、……在数学上，斐波纳契数列以如下被以递归的方法定义：F(0)=0，F(1)=1, F(n)=F(n-1)+F(n-2)，即从第三项开始每一项都等于前面两项的和。
-    ii. 代码实现;
-    package cn.wf.method;
-
-    /**
-    *斐波那契数列:1 1 2 3 5 8 13 21 34
-    * @author xx
-    * @date 
-    */
-    public class FibonacciSequence {
-        public static void main(String[] args) {
-            int result = 0;
-                for(int i = 1;i &lt;= 3;i++) {
-                        result += method(i);
-                }
-                System.out.println(result);
-        }
-        /**递归斐波那契数列*/
-        public static int  method (int n) {
-            if(n == 1) {
-                return 1;
-            }else if(n == 2) {
-                return 1;
-            }else {
-                return method(n-1) + method(n-2);
-            }
-        }
-    }</code></pre><h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><pre><code>package cn.wf.method;
-
-import java.util.Scanner;
-
-/**
-*用户管理模块 +
-*  登陆
-*  注册
-*  修改密码
-*  共同数据：账号、密码
-* @author xx
-* @date 
-*/
-@SuppressWarnings(&quot;all&quot;)
-public class UserManagement {
-    static String username = &quot;&quot;;
-    static String password = &quot;&quot;;
-    static int num = 1;
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println(&quot;***欢迎来访地狱***&quot;);
-            System.out.println(&quot;请选择地狱套餐：1、登陆    2、注册    3、修改密码&quot;);
-            System.out.println(&quot;请选择编号：&quot;);
-            choose(scanner);
-        }
-    }
-
-    /**
-    * 功能选择
-    * @param scanner
-    */
-    public static void choose(Scanner scanner){
-        String next = scanner.next();
-        switch (next){
-            case &quot;1&quot;:
-                System.out.println(&quot;***欢迎登陆***&quot;);
-                login(scanner);
-                break;
-                System.out.println(&quot;***欢迎注册***&quot;);
-                registered(scanner);
-                break;
-            case &quot;3&quot;:
-                System.out.println(&quot;***修改密码***&quot;);
-                changePassword(scanner);
-                break;
-        }
-
-
-    /**
-    * 登陆
-    * @param scanner
-    */
-    public static void login(Scanner scanner){
-        //限制登陆次数
-            //提示输入信息
-            System.out.println(&quot;请输入账号：&quot;);
-            String trg1 = scanner.next();
-            System.out.println(&quot;请输入密码：&quot;);
-            String trg2 = scanner.next();
-            if (trg1.equals(username) &amp;&amp; trg2.equals(password)){
-                System.out.println(&quot;登陆成功！&quot;);
-                //进入计算器中
-                //calculator(scanner);
-                CalculatorDemo calculatorDemo = new CalculatorDemo();
-                CalculatorDemo.calculator(scanner);
-            } else {
-                System.out.println(&quot;账号或密码不一致，登陆失败！&quot;);
-                System.out.println(&quot;请选择是否继续：yes or no&quot;);
-                String message = scanner.next();
-                switch (message){
-                    case &quot;yes&quot;:
-                        login(scanner);
-                        break;
-                        /*System.out.println(&quot;您还有&quot; + (5 - num) + &quot;次机会！&quot;);
-                        num ++;
-                        login(scanner);
-                        if (num == 5){
-                            System.out.println(&quot;登陆次数过多，账号被锁定冻结！&quot;);
-                            return;
-                        }else if (5 - num == 1){
-                                System.out.println(&quot;！！！当前仅剩最后一次登陆机会，如果忘记密码，请输入Forget！！！&quot;);
-                                String trg = scanner.next();
-                                while (trg.equals(&quot;Forget&quot;)){
-                                    System.out.println(&quot;系统将帮您重置密码，请输入验证信息：&quot; + &quot;\n&quot; +&quot;xxxxx的宗旨是：&quot;);
-                                    String ms = scanner.next();
-                                    if (ms.equals(&quot;xxxxx&quot;)){
-                                        System.out.println(&quot;验证成功！&quot;);
-                                        System.out.println(&quot;请输入密码：&quot;);
-                                        String str = scanner.next();
-                                        System.out.println(&quot;请确认密码：&quot;);
-                                        String str1 = scanner.next();
-                                        break;
-                                    }else{
-                                        System.out.print(&quot;信息错误!&quot;);
-                                    }
-                                    return;
-                                }
-                            }else {
-                            return;
-                        }
-                        break;*/
-                    case &quot;no&quot;:
-                        System.out.println(&quot;感谢浏览，再见！&quot;);
-                        return;
-                }
-            }
-    }
-
-    /**
-    * 注册
-    * @param scanner
-    */
-    public static void registered(Scanner scanner){
-        //提示输入信息（可以考虑账号以被注册情况）
-        System.out.println(&quot;请输入账号：&quot;);
-        String mes1 = scanner.next();
-        System.out.println(&quot;请输入密码：&quot;);
-        String mes2 = scanner.next();
-        System.out.println(&quot;请确认密码：&quot;);
-        String mes3 = scanner.next();
-        if (mes2.equals(mes3)){
-            //将注册信息保存，用以验证登陆。
-            username = mes1;
-            password = mes2;
-            System.out.println(&quot;注册成功！&quot;);
-        }else {
-            System.out.println(&quot;密码不一致，注册失败！&quot;);
-            System.out.println(&quot;请选择是否继续：yes or no&quot;);
-            String trg = scanner.next();
-            switch (trg){
-                case &quot;yes&quot;:
-                    registered(scanner);
-                    break;
-                case &quot;no&quot;:
-                    return;
-            }
-        }
-    }
-
-    /**
-    * 修改密码
-    * @param scanner
-    */
-    public static void changePassword(Scanner scanner){
-        System.out.println(&quot;请输入账号：&quot;);
-        String uname = scanner.next();
-        System.out.println(&quot;请输入密码：&quot;);
-        String upass = scanner.next();
-        if (uname.equals(username) &amp;&amp; upass.equals(password)){
-            System.out.println(&quot;请输入新密码：&quot;);
-            String pass1 = scanner.next();
-            System.out.println(&quot;请确认新密码：&quot;);
-            String pass2 = scanner.next();
-            if (pass1.equals(pass2)) {
-                System.out.println(&quot;修改成功！&quot;);
-                password = pass1;
-            }else {
-                System.out.println(&quot;密码不一致，修改失败！&quot;);
-            }
-        }else {
-            System.out.println(&quot;账号密码不匹配！&quot;);
-        }
-    }
-
-    /**
-    * 计算器
-    * @param scanner
-    */
-    /*public static void calculator(Scanner scanner){
-        System.out.println(&quot;请选择计算方式：+   -   *   /&quot;);
-        String select = scanner.next();
-        switch (select){
-            case &quot;+&quot;:
-                System.out.println(&quot;请输入加数：&quot;);
-                int i = scanner.nextInt();
-                System.out.println(&quot;请输入被加数：&quot;);
-                int i1 = scanner.nextInt();
-                System.out.println(i + &quot;+&quot; + i1 + &quot;=&quot; + (i + i1));
-                break;
-            case &quot;-&quot;:
-                System.out.println(&quot;请输入减数：&quot;);
-                int i2 = scanner.nextInt();
-                System.out.println(&quot;请输入被减数：&quot;);
-                int i3 = scanner.nextInt();
-                System.out.println(i2 + &quot;-&quot; + i3 + &quot;=&quot; + (i2 + i3));
-                break;
-            case &quot;*&quot;:
-                System.out.println(&quot;请输入乘数：&quot;);
-                int i4 = scanner.nextInt();
-                System.out.println(&quot;请输入被乘数：&quot;);
-                int i5 = scanner.nextInt();
-                System.out.println(i4 + &quot;*&quot; + i5 + &quot;=&quot; + (i4 + i5));
-                break;
-            case &quot;/&quot;:
-                System.out.println(&quot;请输入除数：&quot;);
-                int i6 = scanner.nextInt();
-                System.out.println(&quot;请输入被除数：&quot;);
-                int i7 = scanner.nextInt();
-                System.out.println(i6 + &quot;/&quot; + i7 + &quot;=&quot; + (i6 + i7));
-                break;
-        }
-
-
-    }*/
-
-}
-
-计算器类
-package cn.wf.method;
-
-import java.util.Scanner;
-
-/**
-*简单的计算器（+、-、*、/）
-* @author xx
-* @date 
-*/
-@SuppressWarnings(&quot;all&quot;)
-public class CalculatorDemo {
-    public static void main(String[] args) {
-
-    }
-
-    public static void calculator(Scanner scanner){
-        System.out.println(&quot;请选择计算方式：+   -   *   /&quot;);
-        String select = scanner.next();
-        switch (select){
-            case &quot;+&quot;:
-                System.out.println(&quot;请输入加数：&quot;);
-                int i = scanner.nextInt();
-                System.out.println(&quot;请输入被加数：&quot;);
-                int i1 = scanner.nextInt();
-                System.out.println(i + &quot;+&quot; + i1 + &quot;=&quot; + (i + i1));
-                break;
-            case &quot;-&quot;:
-                System.out.println(&quot;请输入减数：&quot;);
-                int i2 = scanner.nextInt();
-                System.out.println(&quot;请输入被减数：&quot;);
-                int i3 = scanner.nextInt();
-                System.out.println(i2 + &quot;-&quot; + i3 + &quot;=&quot; + (i2 - i3));
-                break;
-            case &quot;*&quot;:
-                System.out.println(&quot;请输入乘数：&quot;);
-                int i4 = scanner.nextInt();
-                System.out.println(&quot;请输入被乘数：&quot;);
-                int i5 = scanner.nextInt();
-                System.out.println(i4 + &quot;*&quot; + i5 + &quot;=&quot; + (i4 * i5));
-                break;
-            case &quot;/&quot;:
-                System.out.println(&quot;请输入除数：&quot;);
-                int i6 = scanner.nextInt();
-                System.out.println(&quot;请输入被除数：&quot;);
-                int i7 = scanner.nextInt();
-                System.out.println(i6 + &quot;/&quot; + i7 + &quot;=&quot; + (i6 / i7));
-                break;
-        }
-
-
-    }
-
-}
-
-登陆类调用计算器类的计算器方法</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">javaSE</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/04/javase%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-异步传输相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1268,6 +836,82 @@ public class CalculatorDemo {
 
 
   
+    <article id="post-相约春天" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/">相约春天</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/" class="archive-article-date">
+  	<time datetime="2020-04-30T22:13:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="初识Spring，了解IOC"><a href="#初识Spring，了解IOC" class="headerlink" title="初识Spring，了解IOC"></a>初识Spring，了解IOC</h2>
+        
+          <a class="article-more-a" href="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java-Spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/01/%E7%9B%B8%E7%BA%A6%E6%98%A5%E5%A4%A9/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1379,19 +1023,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java-Spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">javaSE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java-springMVC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java-Spring</a>
               </li>
             
             <div class="clearfix"></div>
